@@ -57,3 +57,5 @@ Sevaluasi dengan metrik berikut:
 - Mean Absolute Error (MAE): Mengukur kesalahan rata-rata prediksi rating tanpa memperbesar efek outlier.
 
 - Coverage@N: Mengukur persentase produk unik yang berhasil direkomendasikan model dari seluruh produk yang tersedia, menunjukkan kemampuan model dalam memberikan rekomendasi yang beragam dan tidak monoton.
+
+## **Data UnderStanding**
