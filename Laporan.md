@@ -316,10 +316,59 @@ df_expanded = pd.DataFrame(rows)
 print("Data setelah diekstrak:")
 df_expanded.head(20)
 ```
+
+| | user_id | product_id | rating |
+|---|---|---|---|
+| 0 | AG3D6O4STAQKY2UVGEUV46KN35Q | B07JW9H4J1 | 4.2 |
+| 1 | AHMY5CWJMMK5BJRBSNLYT3ONILA | B07JW9H4J1 | 4.2 |
+| 2 | AHCTC6ULH4XB6YHDY6PCH2R772LQ | B07JW9H4J1 | 4.2 |
+| 3 | AGYHHJERNXKA6P5T7CZLXKVPT7IQ | B07JW9H4J1 | 4.2 |
+| 4 | AG4OGOFWXJZTQ2HKYIOCOY3KXF2Q | B07JW9H4J1 | 4.2 |
+| 5 | AENGU523SXMOS7JPDTW52PNNWVGQ | B07JW9H4J1 | 4.2 |
+| 6 | AEQJHCVTNINBS4FKTBGRQRTGTE5Q | B07JW9H4J1 | 4.2 |
+| 7 | AFC3FFC5PKFF5PMA52S3VCHOZ5FQ | B07JW9H4J1 | 4.2 |
+| 8 | AECPFYFQVRUWC3KGNLJIQREFP5LQ | B098NS6PVG | 4.0 |
+| 9 | AGYVPPDO7YG7FYNBXNGXZJT525AQ | B098NS6PVG | 4.0 |
+| 10 | AHONIZU3ICIEHQIGQ6R2VFRSBXOQ | B098NS6PVG | 4.0 |
+| 11 | AFPHD2CRPDZMWMBL7WXRSVYWVS5JA | B098NS6PVG | 4.0 |
+| 12 | AEZ346GX3HJ4O4XNRPHCNHXQURMQ | B098NS6PVG | 4.0 |
+| 13 | AEPSWFPNECKO34PUC7I56ITGXR6Q | B098NS6PVG | 4.0 |
+| 14 | AHWVVEHR5DYLVFTO2KF3IZATFQSWRQ | B098NS6PVG | 4.0 |
+| 15 | AH4QT33M55677I7ISQOAKEQWACYQ | B098NS6PVG | 4.0 |
+| 16 | AGU3BBQ2V2DDAMOAKGFAWDDQ6QHA | B096MSW6CT | 3.9 |
+| 17 | AESFLDV2PT363T2AQLWQOWZ4N3OA | B096MSW6CT | 3.9 |
+| 18 | AHTPQRIMGUD4BYR5YIHBHC3CCGEFQ | B096MSW6CT | 3.9 |
+| 19 | AEUWVXYP5LT7PZLLZENEO2NODPBQ | B096MSW6CT | 3.9 |
+
 - Proses: Melakukan loop untuk memastikan bahwa satu baris = satu user_id, satu product_id, dan satu rating.
 - Alasan: Format ini adalah bentuk yang standar dan umum digunakan untuk collaborative filtering dan matrix factorization.
 
 **6. Mengabungkan Semua Kolom (Versi Diperluas)**
+```python
+# Tahap 6: Mengabungkan Semua Kolom (Versi Diperluas)
+all_columns = df_clean.columns.tolist()
+
+# Buat list untuk tampung hasil pecahan
+rows = []
+
+# Iterasi tiap baris
+for index, row in df.iterrows():
+    user_list = str(row['user_id']).split(',')  # Pecah user_id berdasar koma
+
+    # Untuk setiap user, buat satu baris baru dengan semua kolom lain ikut
+    for user in user_list:
+        user = user.strip()
+        new_row = row.copy()
+        new_row['user_id'] = user  # Replace jadi satu user saja
+        rows.append(new_row)
+
+# Buat dataframe baru dari hasil pecahan
+df_expanded = pd.DataFrame(rows)
+
+# Tampilkan hasil
+print("Data setelah diekstrak:")
+df_expanded.head(10)
+```
 - Proses: pengabungan kolom dataframe dengan mempertahankan semua kolom (tidak hanya user_id, product_id, rating).
 - Alasan: Menyiapkan data yang tetap lengkap untuk keperluan modeling sistem rekomendasi berbasis colaborative filtering
 
