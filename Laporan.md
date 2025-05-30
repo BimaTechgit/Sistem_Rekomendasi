@@ -427,6 +427,20 @@ df_expanded.isnull().sum()
 Alasan: Memastikan Data harus bersih dan lengkap untuk proses analisis lanjutan, termasuk membangun model
 
 **8. Membersihkan Teks**
+```python
+# Tahap 8: Membersihkan Teks dan melakukan preprocessing text
+import re
+def clean_text(text):
+    text = str(text).lower()
+    text = re.sub(r'<.*?>', ' ', text)
+    text = re.sub(r'[^a-zA-Z0-9\s]', ' ', text)
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+df_expanded['product_name'] = df_expanded['product_name'].apply(clean_text)
+df_expanded['about_product'] = df_expanded['about_product'].apply(clean_text)
+df_expanded['category'] = df_expanded['category'].apply(clean_text)
+```
 - Proses: Membersihkan kolom teks dari HTML tag, karakter khusus, dan mengubah ke huruf kecil. agar semakin bersih.
 - Alasan: Menghilangkan noise dari data teks
 
