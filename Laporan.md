@@ -74,6 +74,31 @@ Dataset ini merepresentasikan informasi mengenai ulasan dan interaksi pengguna t
 
 Berdasarkan eksplorasi awal (EDA), kondisi dataset adalah sebagai berikut:
 
+- Tipe Data: Seluruh kolom saat ini bertipe object, termasuk kolom numerik seperti harga dan rating. Ini mengindikasikan perlunya preprocessing lanjutan seperti konversi tipe data sebelum digunakan dalam model (hanya pada data yang diperlukan konversinya).
+
+```python
+print(df.info())
+```
+
+| Kolom               | Non-Null Count | Dtype  |
+| :------------------ | :------------- | :----- |
+| product_id          | 1465           | object |
+| product_name        | 1465           | object |
+| category            | 1465           | object |
+| discounted_price    | 1465           | object |
+| actual_price        | 1465           | object |
+| discount_percentage | 1465           | object |
+| rating              | 1465           | object |
+| rating_count        | 1463           | object |
+| about_product       | 1465           | object |
+| user_id             | 1465           | object |
+| user_name           | 1465           | object |
+| review_id           | 1465           | object |
+| review_title        | 1465           | object |
+| review_content      | 1465           | object |
+| img_link            | 1465           | object |
+| product_link        | 1465           | object |
+
 - Missing Value: Terdapat missing value pada kolom rating_count sebanyak 2 entri kosong. Kolom lain tidak memiliki nilai hilang.
 
 ```python
@@ -108,8 +133,6 @@ display(df.duplicated().sum())
 ```python
 np.int64(0)
 ```
-
-- Tipe Data: Seluruh kolom saat ini bertipe object, termasuk kolom numerik seperti harga dan rating. Ini mengindikasikan perlunya preprocessing lanjutan seperti konversi tipe data sebelum digunakan dalam model.
 
 ### **📚 Dataset yang digunakan:**
 https://www.kaggle.com/datasets/karkavelrajaj/amazon-sales-dataset
