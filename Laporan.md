@@ -231,10 +231,33 @@ df.head()
 - Alasan: Mengurangi dimensi dataset agar fokus hanya pada informasi yang relevan, serta mempercepat proses analisis selanjutnya.
 
 **2. Konversi Tipe Data**
+```python
+# Tahap 2: Konversi Tipe Data
+# Konversi 'rating' dan rating_count ke tipe numerik
+df['rating'] = pd.to_numeric(df['rating'], errors='coerce')
+df.info()
+```
 - Proses: Mengubah kolom rating dari string menjadi numerik menggunakan pd.to_numeric()
-- Alasan: Agar bisa dilakukan analisis numerik (misalnya rata-rata). dan juga Rating kosong tidak memberikan informasi berguna ketika masih menjadi string.
+- Alasan: Agar bisa dilakukan analisis numerik (misalnya rata-rata) dan juga Rating tidak memberikan informasi berguna ketika masih menjadi string.
 
 **3. Menghapus Nilai Kosong dan duplikat di Kolom Penting**
+```python
+# Tahap 3: Menghapus Nilai Kosong dan duplikat di Kolom Penting
+# Untuk tahap awal, kita drop baris yang missing di kolom penting
+important_cols = ['user_id', 'product_id', 'rating']
+df_clean = df.dropna(subset=important_cols)
+
+print(f"\nJumlah baris setelah drop missing: {df_clean.shape[0]}")
+
+# Periksa duplikasi
+print("\n=== CEK DUPLIKASI ===")
+print(f"Jumlah sebelum cleaning: {df_clean.duplicated().sum()}")
+
+# Hapus duplikasi jika ada
+df_clean = df_clean.drop_duplicates()
+print(f"Jumlah setelah cleaning: {df_clean.duplicated().sum()}")
+print(f"Jumlah baris setelah drop duplikasi: {df_clean.shape[0]}")
+```
 - Proses: Menghapus baris yang tidak memiliki user_id, product_id, atau rating jik ada.
 - Alasan: untuk memastikan ulang tidak ada nilai yang hilang dan jika ada yang hilang maka data yang memiliki salah satu dari ketiga kolom ini tidak bisa digunakan dalam rekomendasi berbasis colaborative filtering
 
