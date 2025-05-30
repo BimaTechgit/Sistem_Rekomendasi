@@ -262,10 +262,60 @@ print(f"Jumlah baris setelah drop duplikasi: {df_clean.shape[0]}")
 - Alasan: untuk memastikan ulang tidak ada nilai yang hilang dan jika ada yang hilang maka data yang memiliki salah satu dari ketiga kolom ini tidak bisa digunakan dalam rekomendasi berbasis colaborative filtering
 
 **4. Menangani Format List pada Kolom user_id (Exploding List)**
+```python
+# Tahap 4: Menangani Format List pada Kolom user_id (Exploding List)
+# Pecah user_id & review_id jika masih dalam bentuk list string
+# Contoh: '["user1", "user2"]' → pisah jadi dua baris
+
+import ast
+
+def explode_column_list(df, col_name):
+    df[col_name] = df[col_name].apply(lambda x: ast.literal_eval(x) if isinstance(x, str) and x.startswith('[') else [x])
+    return df.explode(col_name)
+
+# Terapkan jika perlu
+if isinstance(df_clean['user_id'].iloc[0], str) and df_clean['user_id'].iloc[0].startswith('['):
+    df_clean = explode_column_list(df_clean, 'user_id')
+
+# Pastikan hasil akhirnya adalah satu baris per user–produk–rating
+print("\n=== DATA HASIL AKHIR ===")
+df_clean[['user_id', 'product_id', 'rating']].head(10)
+```
 - Proses: Mendeteksi jika user_id disimpan dalam bentuk list string (misalnya '["u1", "u2"]'), lalu dipecah menjadi baris-baris terpisah per user.
 - Alasan:Agar satu baris hanya merepresentasikan satu user dan satu review, seperti yang disyaratkan oleh kebanyakan algoritma rekomendasi.
 
 **5. Normalisasi Dataframe menjadi Format User–Product–Rating**
+```python
+# Tahap 5: Normalisasi Dataframe menjadi Format User–Product–Rating
+
+# Hanya ambil kolom yang kita perlukan
+df_small = df_clean[['user_id', 'product_id', 'rating']]
+
+# Buat list untuk tampung hasil pecahan
+rows = []
+
+# Iterasi tiap baris
+for index, row in df_small.iterrows():
+    user_list = str(row['user_id']).split(',')  # Pecah user_id berdasar koma
+    product_id = row['product_id']
+    rating = row['rating']
+
+    # Untuk setiap user, buat satu baris baru
+    for user in user_list:
+        user = user.strip()  # Hapus spasi jika ada
+        rows.append({
+            'user_id': user,
+            'product_id': product_id,
+            'rating': rating
+        })
+
+# Buat dataframe baru dari hasil pecahan
+df_expanded = pd.DataFrame(rows)
+
+# Tampilkan hasil
+print("Data setelah diekstrak:")
+df_expanded.head(20)
+```
 - Proses: Melakukan loop untuk memastikan bahwa satu baris = satu user_id, satu product_id, dan satu rating.
 - Alasan: Format ini adalah bentuk yang standar dan umum digunakan untuk collaborative filtering dan matrix factorization.
 
