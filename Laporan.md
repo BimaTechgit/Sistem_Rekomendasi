@@ -84,7 +84,7 @@ Berdasarkan eksplorasi awal (EDA), kondisi dataset adalah sebagai berikut:
 https://www.kaggle.com/datasets/karkavelrajaj/amazon-sales-dataset
 
 
-### **🧾 Variabel-variabel pada Amazon Sales Dataset:**
+### **🧾 Variabel/Atribut pada Amazon Sales Dataset:**
 
 **1. Users_id**
 
