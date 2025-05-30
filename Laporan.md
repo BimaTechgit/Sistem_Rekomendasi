@@ -1,8 +1,5 @@
 # **Sistem Rekomendasi Produk Amazon Berbasis Colaborative Filtering**
-```python
-recommendation_data['Description'] = recommendation_data['Description'].fillna('')
-recommendation_data['Category'] = recommendation_data['Category'].fillna('')
-```
+
 ## **1. Latar Belakang**
 
 Dalam era digital yang terus berkembang, e-commerce telah menjadi pilar utama dalam transformasi ekonomi global. Kemudahan akses, beragamnya pilihan produk, dan fleksibilitas transaksi telah mendorong pertumbuhan pesat sektor ini. Namun, pertumbuhan tersebut juga membawa tantangan baru, terutama dalam hal membantu konsumen menemukan produk yang sesuai dengan preferensi mereka di tengah lautan pilihan yang tersedia. Namun, pertumbuhan ini juga membawa tantangan baru, seperti "information overload" atau kelebihan informasi, yang dapat membingungkan konsumen dalam memilih produk yang sesuai dengan kebutuhan mereka.
@@ -78,7 +75,9 @@ Dataset ini merepresentasikan informasi mengenai ulasan dan interaksi pengguna t
 Berdasarkan eksplorasi awal (EDA), kondisi dataset adalah sebagai berikut:
 
 - Missing Value: Terdapat missing value pada kolom rating_count sebanyak 2 entri kosong. Kolom lain tidak memiliki nilai hilang.
-
+```python
+print(df.info())
+```
 
 - Data Duplikat: Tidak ditemukan baris duplikat. (0 duplikat).
 
@@ -86,7 +85,6 @@ Berdasarkan eksplorasi awal (EDA), kondisi dataset adalah sebagai berikut:
 
 ### **📚 Dataset yang digunakan:**
 https://www.kaggle.com/datasets/karkavelrajaj/amazon-sales-dataset
-
 
 ### **🧾 Variabel/Atribut pada Amazon Sales Dataset:**
 
