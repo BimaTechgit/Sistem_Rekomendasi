@@ -16,7 +16,7 @@ Mengingat peran penting sistem rekomendasi dalam meningkatkan pengalaman penggun
 
 #### **Referensi:**
 
-- [Recommender Systems in E-commerce]([https://kitrum.com/blog/recommendation-systems-in-e-commerce-how-it-works](https://arxiv.org/abs/2212.13910))
+- [Recommender Systems in E-commerce](https://arxiv.org/abs/2212.13910)
 
 ## **Problem Statement**
 
