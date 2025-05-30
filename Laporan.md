@@ -407,8 +407,6 @@ df_expanded.isnull().sum()
 # isi nilai hilang dengan mean
 mean_rating = df_expanded['rating'].mean()
 df_expanded['rating'].fillna(mean_rating, inplace=True)
-
-# Reset index agar rapi
 df_expanded.reset_index(drop=True, inplace=True)
 
 # tampilkan data pasca pengabungan dataframe
