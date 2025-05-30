@@ -370,9 +370,18 @@ print("Data setelah diekstrak:")
 df_expanded.head(10)
 ```
 
-| - | product_id | user_id | product_name | category | about_product | rating | review_content |
+| product_id | user_id | product_name | category | about_product | rating | review_content |
 |---|---|---|---|---|---|---|---|---|
 | 0 | B07JW9H4J1 | AG3D6O4STAQKAY2UVGEUV46KN35Q | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... |  | 4.2 | Looks durable Charging is fi... |
+| 0 | B07JW9H4J1 | AG3D6O4STAQKAY2UVGEUV46KN35Q | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... |  | 4.2 | Looks durable Charging is fi... |
+| 0 | B07JW9H4J1 | AG3D6O4STAQKAY2UVGEUV46KN35Q | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... |  | 4.2 | Looks durable Charging is fi... |
+| 0 | B07JW9H4J1 | AG3D6O4STAQKAY2UVGEUV46KN35Q | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... |  | 4.2 | Looks durable Charging is fi... |
+| 0 | B07JW9H4J1 | AG3D6O4STAQKAY2UVGEUV46KN35Q | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... |  | 4.2 | Looks durable Charging is fi... |
+| 0 | B07JW9H4J1 | AG3D6O4STAQKAY2UVGEUV46KN35Q | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... |  | 4.2 | Looks durable Charging is fi... |
+| 0 | B07JW9H4J1 | AG3D6O4STAQKAY2UVGEUV46KN35Q | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... |  | 4.2 | Looks durable Charging is fi... |
+| 0 | B07JW9H4J1 | AG3D6O4STAQKAY2UVGEUV46KN35Q | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... |  | 4.2 | Looks durable Charging is fi... |
+| 1 | B098NS6PVG | AG3D6O4STAQKAY2UVGEUV46KN35Q | Ambrane Unbreakable 60W / 3A Fast Charging 1.5... | Computers&Accessories|Acces... |  | 4.2 | Looks durable Charging is fi... |
+| 1 | B098NS6PVG | AG3D6O4STAQKAY2UVGEUV46KN35Q | Ambrane Unbreakable 60W / 3A Fast Charging 1.5... | Computers&Accessories|Acces... |  | 4.2 | Looks durable Charging is fi... |
 
 
 - Proses: pengabungan kolom dataframe dengan mempertahankan semua kolom (tidak hanya user_id, product_id, rating).
