@@ -403,6 +403,27 @@ df_expanded.isnull().sum()
 | **rating** | **8** |
 | review_content    | 0      |
 
+```python
+# isi nilai hilang dengan mean
+mean_rating = df_expanded['rating'].mean()
+df_expanded['rating'].fillna(mean_rating, inplace=True)
+
+# Reset index agar rapi
+df_expanded.reset_index(drop=True, inplace=True)
+
+# tampilkan data pasca pengabungan dataframe
+df_expanded.isnull().sum()
+```
+| Kolom             | Jumlah |
+| :---------------- | :----- |
+| product_id        | 0      |
+| user_id           | 0      |
+| product_name      | 0      |
+| category          | 0      |
+| about_product     | 0      |
+| rating            | 0      |
+| review_content    | 0      |
+
 
 - Proses: Mengecek ulang nilai yang hilang pasca pengabungan tahap 6. lalu Menghapus baris yang banyak nilai kosong atau inputasi jika data hilang tidak terlalu banyak.
 Alasan: Memastikan Data harus bersih dan lengkap untuk proses analisis lanjutan, termasuk membangun model
