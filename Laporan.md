@@ -14,6 +14,10 @@ Implementasi sistem rekomendasi yang efektif menjadi hal yang krisial terutama b
 
 Mengingat peran penting sistem rekomendasi dalam meningkatkan pengalaman pengguna dan kinerja bisnis di e-commerce, pembangunan sistem rekomendasi berbasis collaborative filtering menjadi sangat relevan. Dengan memanfaatkan data interaksi pengguna, sistem yang dikembangkan diharapkan  dapat memberikan rekomendasi yang lebih akurat dan relevan, meningkatkan kepuasan pelanggan, dan mendorong pertumbuhan bisnis serta memberikan kontribusi positif terhadap peningkatan kinerja platform e-commerce.
 
+#### **Referensi:**
+
+- [Recommender Systems in E-commerce]([https://kitrum.com/blog/recommendation-systems-in-e-commerce-how-it-works](https://arxiv.org/abs/2212.13910))
+
 ## **Problem Statement**
 
 Berdasarkan latar belakang yang dibahas, berikut ini adalah pernyataan masalah yang dihadapi tentang perfoma belajar siswa:
