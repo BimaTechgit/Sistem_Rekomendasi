@@ -75,6 +75,10 @@ Dataset ini merepresentasikan informasi mengenai ulasan dan interaksi pengguna t
 Berdasarkan eksplorasi awal (EDA), kondisi dataset adalah sebagai berikut:
 
 - Missing Value: Terdapat missing value pada kolom rating_count sebanyak 2 entri kosong. Kolom lain tidak memiliki nilai hilang.
+- ```python
+if recommendation_data['Place_Name'].duplicated().any():
+```
+
 
 - Data Duplikat: Tidak ditemukan baris duplikat. (0 duplikat).
 
