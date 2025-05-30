@@ -194,5 +194,14 @@ https://www.kaggle.com/datasets/karkavelrajaj/amazon-sales-dataset
 **16. product_link**
 - URL halaman produk di situs Amazon. Bisa digunakan untuk scraping lanjutan atau redirect ke halaman aktual produk.
 
-```python if recommendation_data['Place_Name'].duplicated().any():
-```
+## Exploratory Data Analysis (EDA)
+
+![download (25)](https://github.com/user-attachments/assets/ce6c43cb-7879-4d06-96dc-7fe33e5fb693)
+
+Berdasarkan visualisasi grafik yang menampilkan 10 kategori produk terpopuler , kita dapat melihat bahwa kategori produk sangat beragam namun tetap mencerminkan tren konsumsi modern yang didominasi oleh teknologi dan kebutuhan sehari-hari. Kategori dengan jumlah produk tertinggi adalah "Computers&Accessories|Accessories&Peripherals|Cables&Accessories|Cables|USBCables" , yang menunjukkan bahwa aksesori elektronik seperti kabel USB memiliki permintaan yang sangat tinggi. Hal ini tidak mengherankan, mengingat perangkat elektronik saat ini hampir selalu membutuhkan koneksi data yang cepat dan andal, serta kabel USB menjadi salah satu komponen penting dalam ekosistem teknologi modern. Dominasi kategori ini juga mencerminkan bagaimana pengguna cenderung membeli produk-produk pendukung untuk perangkat utama mereka, seperti laptop, smartphone, atau tablet.
+
+Selain kabel USB, kategori elektronik lainnya seperti SmartWatches , Smartphones , dan SmartTelevisions juga mendominasi daftar terpopuler. Fenomena ini menunjukkan bahwa masyarakat semakin bergantung pada teknologi pintar dalam kehidupan sehari-hari. Misalnya, jam tangan pintar (smartwatches) menjadi populer karena fungsinya yang tidak hanya sebagai alat penunjuk waktu, tetapi juga sebagai perangkat kesehatan dan produktivitas. Sementara itu, televisi pintar (smart TVs) dan ponsel pintar (smartphones) mencerminkan kebutuhan akan hiburan dan konektivitas yang semakin meningkat. Kategori-kategori ini juga sering kali menjadi prioritas bagi pengguna yang mencari produk dengan fitur inovatif dan desain modern.
+
+Di sisi lain, ada beberapa kategori rumah tangga seperti Mixer Grinders dan Dry Irons yang meskipun jumlah produknya lebih rendah dibandingkan kategori elektronik, tetap relevan dalam dataset ini. Kehadiran kategori ini menunjukkan bahwa produk-produk rumah tangga tradisional masih memiliki pasar yang stabil, meskipun mungkin tidak sepopuler produk elektronik. Produk-produk ini sering kali dibutuhkan untuk menunjang aktivitas sehari-hari di rumah, sehingga tetap menjadi pilihan bagi konsumen yang mencari barang-barang praktis dan fungsional.
+
+Secara keseluruhan, grafik ini memberikan gambaran yang jelas tentang preferensi konsumen di era digital saat ini. Kategori elektronik mendominasi daftar terpopuler, mencerminkan tren global menuju gaya hidup yang lebih cerdas dan terhubung. Namun, produk rumah tangga tradisional tetap memiliki tempat tersendiri dalam kehidupan konsumen. Informasi ini sangat berguna untuk membangun sistem rekomendasi yang lebih relevan, karena kita dapat memprioritaskan rekomendasi berdasarkan kategori yang paling banyak diminati, seperti kabel USB, smartwatches, atau smart TVs, sambil tetap mempertimbangkan produk rumah tangga sebagai opsi tambahan bagi pengguna dengan minat yang lebih spesifik. Dengan pemahaman ini, bisnis dapat lebih efektif dalam menargetkan kebutuhan konsumen dan meningkatkan pengalaman belanja mereka.
