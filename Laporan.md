@@ -17,6 +17,10 @@ Mengingat peran penting sistem rekomendasi dalam meningkatkan pengalaman penggun
 #### **Referensi:**
 
 - [Recommender Systems in E-commerce](https://arxiv.org/abs/2212.13910)
+- [Designing an e-commerce recommender system based on collaborative filtering using a data mining approach](https://www.inderscienceonline.com/doi/abs/10.1504/IJBIS.2019.101582)
+- [Examining collaborative filtering algorithms for clothing recommendation in e-commerce](https://journals.sagepub.com/doi/abs/10.1177/0040517518801200)
+- [Implementasi E-Commerce dengan Sistem Informasi Rekomendasi menggunakan Metode Collaborative Filtering untuk Pengembangan Penjualan pada UMKM](https://ejournal.undip.ac.id/index.php/jsinbis/article/view/68333)
+- [Recommendation Systems in E-commerce: How It Works?](https://kitrum.com/blog/recommendation-systems-in-e-commerce-how-it-works/)
 
 ## **Problem Statement**
 
