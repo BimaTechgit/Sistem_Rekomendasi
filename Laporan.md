@@ -388,6 +388,22 @@ df_expanded.head(10)
 - Alasan: Menyiapkan data yang tetap lengkap untuk keperluan modeling sistem rekomendasi berbasis colaborative filtering
 
 **7. Check dan Inputasi/drop nilai yang hilang**
+
+```python
+# Tahap 7: Check dan Inputasi/drop nilai yang hilang.
+df_expanded.isnull().sum()
+```
+| Kolom             | Jumlah |
+| :---------------- | :----- |
+| product_id        | 0      |
+| user_id           | 0      |
+| product_name      | 0      |
+| category          | 0      |
+| about_product     | 0      |
+| **rating** | **8** |
+| review_content    | 0      |
+
+
 - Proses: Mengecek ulang nilai yang hilang pasca pengabungan tahap 6. lalu Menghapus baris yang banyak nilai kosong atau inputasi jika data hilang tidak terlalu banyak.
 Alasan: Memastikan Data harus bersih dan lengkap untuk proses analisis lanjutan, termasuk membangun model
 
