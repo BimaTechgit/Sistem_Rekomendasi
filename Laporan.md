@@ -207,3 +207,65 @@ Di sisi lain, ada beberapa kategori rumah tangga seperti Mixer Grinders dan Dry 
 Secara keseluruhan, grafik ini memberikan gambaran yang jelas tentang preferensi konsumen di era digital saat ini. Kategori elektronik mendominasi daftar terpopuler, mencerminkan tren global menuju gaya hidup yang lebih cerdas dan terhubung. Namun, produk rumah tangga tradisional tetap memiliki tempat tersendiri dalam kehidupan konsumen. Informasi ini sangat berguna untuk membangun sistem rekomendasi yang lebih relevan, karena kita dapat memprioritaskan rekomendasi berdasarkan kategori yang paling banyak diminati, seperti kabel USB, smartwatches, atau smart TVs, sambil tetap mempertimbangkan produk rumah tangga sebagai opsi tambahan bagi pengguna dengan minat yang lebih spesifik. Dengan pemahaman ini, bisnis dapat lebih efektif dalam menargetkan kebutuhan konsumen dan meningkatkan pengalaman belanja mereka.
 
 ## **Data Preparation**
+
+# **Data Preparation & Preprocessing**
+
+Tahap data preparation & preprocessing merupakan salah satu langkah krusial dalam pengembangan sistem rekomendasi berbasis collaborative filtering. Pada tahap ini, data mentah yang telah dikumpulkan dari dataset amazon.csv akan dibersihkan, diorganisasi, diseleksi dan dipersiapkan agar siap digunakan untuk analisis lebih lanjut serta pembuatan model rekomendasi. Tujuan utama dari tahap ini adalah memastikan bahwa data yang digunakan memiliki kualitas tinggi, konsisten, dan sesuai dengan kebutuhan algoritma collaborative filtering.
+
+---
+
+### **Tahapan yang dilakukan diantaranya:**
+
+**1. Pemilihan Kolom Penting**
+```python
+# Tahap 1: Pemilihan Kolom Penting
+# Kolom penting yang akan digunakan
+important_columns = [
+    'product_id', 'user_id', 'product_name', 'category', 'about_product', 'rating', 'review_content'
+]
+
+df = df[important_columns]
+df.head()
+```
+- Proses: Hanya memilih kolom-kolom yang relevan untuk analisis lebih lanjut. Kolom yang dipilih adalah ('product_id', 'user_id', 'product_name', 'category', 'about_product', 'rating', 'review_content')
+- Alasan: Mengurangi dimensi dataset agar fokus hanya pada informasi yang relevan, serta mempercepat proses analisis selanjutnya.
+
+**2. Konversi Tipe Data**
+- Proses: Mengubah kolom rating dari string menjadi numerik menggunakan pd.to_numeric()
+- Alasan: Agar bisa dilakukan analisis numerik (misalnya rata-rata). dan juga Rating kosong tidak memberikan informasi berguna ketika masih menjadi string.
+
+**3. Menghapus Nilai Kosong dan duplikat di Kolom Penting**
+- Proses: Menghapus baris yang tidak memiliki user_id, product_id, atau rating jik ada.
+- Alasan: untuk memastikan ulang tidak ada nilai yang hilang dan jika ada yang hilang maka data yang memiliki salah satu dari ketiga kolom ini tidak bisa digunakan dalam rekomendasi berbasis colaborative filtering
+
+**4. Menangani Format List pada Kolom user_id (Exploding List)**
+- Proses: Mendeteksi jika user_id disimpan dalam bentuk list string (misalnya '["u1", "u2"]'), lalu dipecah menjadi baris-baris terpisah per user.
+- Alasan:Agar satu baris hanya merepresentasikan satu user dan satu review, seperti yang disyaratkan oleh kebanyakan algoritma rekomendasi.
+
+**5. Normalisasi Dataframe menjadi Format User–Product–Rating**
+- Proses: Melakukan loop untuk memastikan bahwa satu baris = satu user_id, satu product_id, dan satu rating.
+- Alasan: Format ini adalah bentuk yang standar dan umum digunakan untuk collaborative filtering dan matrix factorization.
+
+**6. Mengabungkan Semua Kolom (Versi Diperluas)**
+- Proses: pengabungan kolom dataframe dengan mempertahankan semua kolom (tidak hanya user_id, product_id, rating).
+- Alasan: Menyiapkan data yang tetap lengkap untuk keperluan modeling sistem rekomendasi berbasis colaborative filtering
+
+**7. Check dan Inputasi/drop nilai yang hilang**
+- Proses: Mengecek ulang nilai yang hilang pasca pengabungan tahap 6. lalu Menghapus baris yang banyak nilai kosong atau inputasi jika data hilang tidak terlalu banyak.
+Alasan: Memastikan Data harus bersih dan lengkap untuk proses analisis lanjutan, termasuk membangun model
+
+**8. Membersihkan Teks**
+- Proses: Membersihkan kolom teks dari HTML tag, karakter khusus, dan mengubah ke huruf kecil. agar semakin bersih.
+- Alasan: Menghilangkan noise dari data teks
+
+**9. menukar variable data**
+- Proses: variable yang telah dilakukan preparation dan preprocessing akan dikembalikan lagi kedalam bentuk variable df
+- Alasan: untuk melakukan validasi bahwa data yang dilakukan tahap preparation dan preprocessing sudah selesai dan siap dibawa ke tahap modeling.
+
+**10. Encoding Kolom Kategorikal (user_id dan product_id)**
+- Proses: Mengubah nilai kategorikal dari kolom user_id dan product_id menjadi nilai numerik menggunakan LabelEncoder dari Scikit-learn.
+- Alasan: Model machine learning tidak bisa memproses string atau ID non-numerik. Oleh karena itu, perlu dilakukan encoding ke format integer (label encoding). Langkah ini penting untuk algoritma neural collaborative filtering, atau embedding layer pada neural network.
+
+**11. Normalisasi Rating dan Split Dataset**
+- Proses: Normalisasi rating ke skala 0–1 menggunakan formula min–max normalization kemudian Membagi dataset menjadi data pelatihan dan validasi (80:20) menggunakan train_test_split.
+- Alasan: Normalisasi membantu mempercepat konvergensi model dan mencegah dominasi nilai besar saat training sementara Split data dilakukan agar performa model dapat diuji pada data yang belum pernah dilihat, mencegah overfitting.
