@@ -34,6 +34,10 @@ Berdasarkan latar belakang yang dibahas, Mengembangkan dan menerapkan model sist
 
 3. Mengevaluasi sistem rekomendasi menggunakan metrik terukur seperti RMSE, MAE, dan Coverage untuk menilai akurasi prediksi dan keragaman produk yang direkomendasikan.
 
+## **Goals**
+
+Berdasarkan latar belakang yang dibahas, Mengembangkan dan menerapkan model sistem rekomendasi berbasis colaborative filtering bertujuan untuk:
+
 ### **Solution Statements**
 
 - Mengembangkan model Collaborative Filtering menggunakan pendekatan Neural Collaborative Filtering (NCF) dengan embedding layer untuk mempelajari representasi pengguna dan produk secara otomatis dari interaksi historis.
