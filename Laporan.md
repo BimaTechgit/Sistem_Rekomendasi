@@ -371,7 +371,7 @@ df_expanded.head(10)
 ```
 
 | | product_id | user_id | product_name | category | about_product | rating | review_content |
-|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|
 | 0 | B07JW9H4J1 | AG3D6O4STAQKAY2UVGEUV46KN35Q | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... |  | 4.2 | Looks durable Charging is fi... |
 | 0 | B07JW9H4J1 | AHMY5CWJMMK5BJRBBSNLYT3ONILA | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... | High Compatibility : Compati... | 4.2 | Looks durable Charging is fi... |
 | 0 | B07JW9H4J1 | AHCTC6ULH4XB6YHDY6PCH2R772LQ | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... | High Compatibility : Compati... | 4.2 | Looks durable Charging is fi... |
