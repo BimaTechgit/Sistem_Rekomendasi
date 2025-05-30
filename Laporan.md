@@ -50,7 +50,7 @@ Berdasarkan latar belakang yang dibahas, Mengembangkan dan menerapkan model sist
 
 ### **Evaluasi:**
 
-Sevaluasi dengan metrik berikut:
+evaluasi dilakukan dengan pendekatan metrik berikut:
 
 - Root Mean Squared Error (RMSE): Mengukur seberapa besar kesalahan prediksi sistem terhadap rating aktual.
 
