@@ -59,3 +59,81 @@ Sevaluasi dengan metrik berikut:
 - Coverage@N: Mengukur persentase produk unik yang berhasil direkomendasikan model dari seluruh produk yang tersedia, menunjukkan kemampuan model dalam memberikan rekomendasi yang beragam dan tidak monoton.
 
 ## **Data UnderStanding**
+
+### 🔢 **Informasi Dataset**
+
+Dataset ini terdiri dari:
+
+- 1465 baris
+
+- 16 kolom
+
+Dataset ini merepresentasikan informasi mengenai ulasan dan interaksi pengguna terhadap produk-produk yang dijual di platform e-commerce Amazon. Data mencakup karakteristik produk, diskon, rating, serta informasi ulasan dari pengguna. Informasi ini sangat relevan untuk pembangunan sistem rekomendasi berbasis Collaborative Filtering karena memuat relasi antara pengguna dan produk
+
+### **🧹 Kondisi Data**
+
+Berdasarkan eksplorasi awal (EDA), kondisi dataset adalah sebagai berikut:
+
+- Missing Value: Terdapat missing value pada kolom rating_count sebanyak 2 entri kosong. Kolom lain tidak memiliki nilai hilang.
+
+- Data Duplikat: Tidak ditemukan baris duplikat. (0 duplikat).
+
+- Tipe Data: Seluruh kolom saat ini bertipe object, termasuk kolom numerik seperti harga dan rating. Ini mengindikasikan perlunya preprocessing lanjutan seperti konversi tipe data sebelum digunakan dalam model.
+
+### **📚 Dataset yang digunakan:**
+https://www.kaggle.com/datasets/karkavelrajaj/amazon-sales-dataset
+
+
+### **🧾 Variabel-variabel pada Amazon Sales Dataset:**
+
+**1. Users_id**
+
+- ID unik untuk setiap siswa (identifikasi individual). ID pengguna terdiri dari range (1-1465).
+- Catatan: Baris tersebut terdiri dari gabungan beberapa user (multiuser) dan akan bertambah ketika dilakukan pemisahan per baris sendiri.
+- Karena sifatnya unik, ID tentu sangat digunakan digunakan sebagai fitur prediktor karena memuat informasi bermakna secara langsung terhadap user.
+
+**2. product_id**
+
+- ID unik (alphanumeric) untuk setiap produk di Amazon. Digunakan sebagai identifier utama untuk menghubungkan berbagai informasi tentang produk. Contoh: "B07XJ8C8F5", "B09W5XR9RT" dan id produk lainnya. ini juga sangat berpengaruh pada colaborative filtering
+
+**3. product_name**
+- Berisi Nama lengkap produk yang ditampilkan di halaman Amazon. Ini bisa mencakup nama merek, model, dan fitur utama. Contoh produk seperti: "Apple AirPods Pro (2nd Generation)"
+
+**4. category**
+- Kategori produk utama, biasanya satu dari: 'Computer', 'Electronics', 'Books', 'Clothing', 'Home & Kitchen', dll. Kategori ini penting untuk segmentasi dan analisis perilaku pengguna.
+
+**5. discounted_price**
+- Harga akhir produk setelah diskon. Aslinya berupa string (misal ₹500). Bisa digunakan untuk analisis pricing dan diskon. tetapi kurang dibutuhkan dalam colaborative filtering.
+
+**6. actual_price**
+- Harga asli produk sebelum potongan. tidak banyak yang bisa dimanfaatkan oleh fitur ini karena kita tidak menggunakannya dalam colaborative filtering
+
+**7. discount_percentage**
+- Persentase diskon yang diterapkan terhadap harga asli.yang membedakan dengan discounted price, diskon percentage adalah nilai diskon yang diberikan dan bukan harga akhir yang diberikan
+
+**8. rating**
+- Nilai rating yang diberikan (biasanya dalam skala 1–5). ini akan menjadi informasi penting pada pendekatan colaborative filtering dan juga perlu disesuaikan tipe dataya menjadi float.
+
+**9. rating_count**
+- Jumlah rating yang diberikan pengguna lain terhadap produk tersebut. menunjukkan berapa kali sebuah produk telah diberi rating secara keseluruhan, atau berapa banyak rating yang diterima oleh sebuah produk. Informasi ini adalah atribut dari produk itu sendiri, bukan interaksi spesifik antara user dan product.
+
+**10. about_product**
+- Deskripsi singkat produk yang biasanya ditulis oleh penjual atau sistem, bukan viewer. Ini bisa mencakup fitur, bahan, ukuran, dsb. Contoh: "Bluetooth-enabled wireless earphones with ANC"
+
+**11. user_name**
+- Nama pengguna yang memberikan ulasan. Nama tampilan pengguna (username) yang memberikan review. Ini bisa berupa nama asli atau pseudonim, tergantung preferensi pengguna Amazon.
+
+**12. review_id**
+- ID unik dari setiap review, digunakan sebagai primary key untuk ulasan. Format alfanumerik. Contoh: "R3U6J3XCKXQY8K". sama seperti user_id Baris tersebut terdiri dari gabungan beberapa user (multiuser) dan akan bertambah ketika dilakukan pemisahan per baris sendiri walaupun dalam kasus ini kita tidak menggunakannya.
+
+**13. review_title**
+- Judul singkat dari review yang ditulis oleh pengguna. Biasanya berupa kesan utama dalam satu kalimat. Contoh: "Worth every penny!"
+
+**14. review_content**
+- Isi lengkap ulasan pengguna terhadap produk. Bisa sangat bervariasi panjangnya — dari satu kalimat hingga beberapa paragraf. Data ini cocok untuk analisis sentimen dan NLP namun kurang memadai dalam kasus sistem rekomendasi kali ini.
+
+**15. img_link**
+- URL gambar utama produk di Amazon. Tipe data string. Digunakan dalam frontend display atau image-based analysis.
+
+**16. product_link**
+- URL halaman produk di situs Amazon. Bisa digunakan untuk scraping lanjutan atau redirect ke halaman aktual produk.
