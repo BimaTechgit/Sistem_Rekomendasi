@@ -445,13 +445,61 @@ df_expanded['category'] = df_expanded['category'].apply(clean_text)
 - Alasan: Menghilangkan noise dari data teks
 
 **9. menukar variable data**
+```python
+# Tahap 9: Menukar variable data
+# Misalnya hasil preparation disimpan ke df
+df = df_expanded.copy()  # df adalah hasil transformnya
+```
 - Proses: variable yang telah dilakukan preparation dan preprocessing akan dikembalikan lagi kedalam bentuk variable df
-- Alasan: untuk melakukan validasi bahwa data yang dilakukan tahap preparation dan preprocessing sudah selesai dan siap dibawa ke tahap modeling.
+- Alasan: untuk mengembalikan variable seperti format sebelumnya dan lebih mudah dipahami.
 
 **10. Encoding Kolom Kategorikal (user_id dan product_id)**
+```python
+# Tahap 10: Encoding Kolom Kategorikal (user_id dan product_id)
+from sklearn.preprocessing import LabelEncoder
+
+user_encoder = LabelEncoder()
+product_encoder = LabelEncoder()
+
+# Transform ke bentuk numerik
+df['user_idx'] = user_encoder.fit_transform(df['user_id'])
+df['product_idx'] = product_encoder.fit_transform(df['product_id'])
+```
 - Proses: Mengubah nilai kategorikal dari kolom user_id dan product_id menjadi nilai numerik menggunakan LabelEncoder dari Scikit-learn.
 - Alasan: Model machine learning tidak bisa memproses string atau ID non-numerik. Oleh karena itu, perlu dilakukan encoding ke format integer (label encoding). Langkah ini penting untuk algoritma neural collaborative filtering, atau embedding layer pada neural network.
 
 **11. Normalisasi Rating dan Split Dataset**
+```python
+# Tahap 11: Normalisasi dan Split Data
+from sklearn.model_selection import train_test_split
+
+# Normalisasi rating (0–1)
+min_rating = df['rating'].min()
+max_rating = df['rating'].max()
+df['rating_norm'] = (df['rating'] - min_rating) / (max_rating - min_rating)
+
+# Siapkan input X dan target y
+X = df[['user_idx', 'product_idx']].values
+y = df['rating_norm'].values
+
+# Split data
+X_train, x_val_cf, y_train, y_val_cf = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Cek kembali
+print("Sample of X (user_idx, product_idx):")
+print(X[:5])
+print("\nSample of y (rating_norm):")
+print(y[:5])
+print(f"\nShape of X_train: {X_train.shape}")
+print(f"Shape of x_val_cf: {x_val_cf.shape}")
+print(f"Shape of y_train: {y_train.shape}")
+print(f"Shape of y_val_cf: {y_val_cf.shape}")
+
+# Pastikan kolom asli tidak dihapus
+print("\nKolom-kolom dalam dataframe setelah preprocessing:")
+print(df.columns)
+```
 - Proses: Normalisasi rating ke skala 0–1 menggunakan formula min–max normalization kemudian Membagi dataset menjadi data pelatihan dan validasi (80:20) menggunakan train_test_split.
 - Alasan: Normalisasi membantu mempercepat konvergensi model dan mencegah dominasi nilai besar saat training sementara Split data dilakukan agar performa model dapat diuji pada data yang belum pernah dilihat, mencegah overfitting.
