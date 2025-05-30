@@ -371,17 +371,9 @@ df_expanded.head(10)
 ```
 
 | | product_id | user_id | product_name | category | about_product | rating | review_content |
-|---|---|---|---|---|---|---|---|---|
-| 0 | B07JW9H4J1 | AG3D6O4STAQKAY2UVGEUV46KN35Q | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... |  | 4.2 | Looks durable Charging is fi... |
-| 0 | B07JW9H4J1 | AHMY5CWJMMK5BJRBBSNLYT3ONILA | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... | High Compatibility : Compati... | 4.2 | Looks durable Charging is fi... |
-| 0 | B07JW9H4J1 | AHCTC6ULH4XB6YHDY6PCH2R772LQ | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... | High Compatibility : Compati... | 4.2 | Looks durable Charging is fi... |
-| 0 | B07JW9H4J1 | AGYHHIERNXKA6P5T7CZLXKVPT7IQ | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... | High Compatibility : Compati... | 4.2 | Looks durable Charging is fi... |
-| 0 | B07JW9H4J1 | AG4OGOFWXJZTQ2HKYIOCOY3KXF2Q | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... | High Compatibility : Compati... | 4.2 | Looks durable Charging is fi... |
-| 0 | B07JW9H4J1 | AENGU523SXMOS7JPDTW52PNNVWGQ | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... | High Compatibility : Compati... | 4.2 | Looks durable Charging is fi... |
-| 0 | B07JW9H4J1 | AEQJHCVTNINBS4FKTBGQRQTGTE5Q | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... | High Compatibility : Compati... | 4.2 | Looks durable Charging is fi... |
-| 0 | B07JW9H4J1 | AFC3FFC5PKFF5PMA52S3VCHOZ5FQ | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... | High Compatibility : Compati... | 4.2 | Looks durable Charging is fi... |
-| 1 | B098NS6PVG | AECPFYFQVRUWC3KGNLJIOREFP5LQ | Ambrane Unbreakable 60W / 3A Fast Charging 1.5... | Computers&Accessories|Acces... | Compatible with all Type C e... | 4.0 | I ordered this cable to conn... |
-| 1 | B098NS6PVG | AGYYVPDD7YG7FYNBXNGXZJT525AQ | Ambrane Unbreakable 60W / 3A Fast Charging 1.5... | Computers&Accessories|Acces... | Compatible with all Type C e... | 4.0 | I ordered this cable to conn... |
+|---|---|---|---|---|---|---|---|
+| B07JW9H4J1 | AG3D6O4STAQKAY2UVGEUV46KN35Q | Wayona Nylon Braided USB to Lightning Fast Cha... | Computers&Accessories|Acces... |  | 4.2 | Looks durable Charging is fi... |
+
 
 - Proses: pengabungan kolom dataframe dengan mempertahankan semua kolom (tidak hanya user_id, product_id, rating).
 - Alasan: Menyiapkan data yang tetap lengkap untuk keperluan modeling sistem rekomendasi berbasis colaborative filtering
