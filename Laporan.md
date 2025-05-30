@@ -74,7 +74,8 @@ Dataset ini merepresentasikan informasi mengenai ulasan dan interaksi pengguna t
 
 Berdasarkan eksplorasi awal (EDA), kondisi dataset adalah sebagai berikut:
 
-- Tipe Data: Seluruh kolom saat ini bertipe object, termasuk kolom numerik seperti harga dan rating. Ini mengindikasikan perlunya preprocessing lanjutan seperti konversi tipe data sebelum digunakan dalam model (hanya pada data yang diperlukan konversinya).
+1. Tipe Data:
+- Seluruh kolom saat ini bertipe object, termasuk kolom numerik seperti harga dan rating. Ini mengindikasikan perlunya preprocessing lanjutan seperti konversi tipe data sebelum digunakan dalam model (hanya pada data yang diperlukan konversinya).
 
 ```python
 print(df.info())
@@ -99,7 +100,8 @@ print(df.info())
 | img_link            | 1465           | object |
 | product_link        | 1465           | object |
 
-- Missing Value: Terdapat missing value pada kolom rating_count sebanyak 2 entri kosong. Kolom lain tidak memiliki nilai hilang.
+2. Missing Value:
+- Terdapat missing value pada kolom rating_count sebanyak 2 entri kosong. Kolom lain tidak memiliki nilai hilang.
 
 ```python
 print(df.info())
@@ -124,7 +126,8 @@ print(df.info())
 | img_link            | 0                     |
 | product_link        | 0                     |
 
-- Data Duplikat: Tidak ditemukan baris duplikat. (0 duplikat).
+3. Data Duplikat:
+- Tidak ditemukan baris duplikat. (0 duplikat).
 
 ```python
 display(df.duplicated().sum())
