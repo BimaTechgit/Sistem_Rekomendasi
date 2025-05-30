@@ -101,6 +101,14 @@ print(df.info())
 
 - Data Duplikat: Tidak ditemukan baris duplikat. (0 duplikat).
 
+```python
+display(df.duplicated().sum())
+```
+
+```python
+np.int64(0)
+```
+
 - Tipe Data: Seluruh kolom saat ini bertipe object, termasuk kolom numerik seperti harga dan rating. Ini mengindikasikan perlunya preprocessing lanjutan seperti konversi tipe data sebelum digunakan dalam model.
 
 ### **📚 Dataset yang digunakan:**
