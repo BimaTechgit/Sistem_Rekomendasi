@@ -75,9 +75,29 @@ Dataset ini merepresentasikan informasi mengenai ulasan dan interaksi pengguna t
 Berdasarkan eksplorasi awal (EDA), kondisi dataset adalah sebagai berikut:
 
 - Missing Value: Terdapat missing value pada kolom rating_count sebanyak 2 entri kosong. Kolom lain tidak memiliki nilai hilang.
+
 ```python
 print(df.info())
 ```
+
+| Kolom               | Jumlah Missing Values |
+| :------------------ | :-------------------- |
+| product_id          | 0                     |
+| product_name        | 0                     |
+| category            | 0                     |
+| discounted_price    | 0                     |
+| actual_price        | 0                     |
+| discount_percentage | 0                     |
+| rating              | 0                     |
+| rating_count        | 2                     |
+| about_product       | 0                     |
+| user_id             | 0                     |
+| user_name           | 0                     |
+| review_id           | 0                     |
+| review_title        | 0                     |
+| review_content      | 0                     |
+| img_link            | 0                     |
+| product_link        | 0                     |
 
 - Data Duplikat: Tidak ditemukan baris duplikat. (0 duplikat).
 
