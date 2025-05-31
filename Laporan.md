@@ -698,4 +698,50 @@ Interpretasi:
 
 RMSE = 0.1439 dan MAE = 0.1096 menunjukkan bahwa model memberikan prediksi yang cukup akurat terhadap preferensi user. Secara keseluruhan, hasil ini menunjukkan bahwa model Collaborative Filtering yang dikembangkan mampu memberikan performa prediksi yang baik, meskipun masih dapat ditingkatkan lebih lanjut melalui teknik seperti hyperparameter tuning, penambahan data, atau modifikasi arsitektur model.
 
+```python
+Coverage @ 10: 0.5522
+Total recommended items: 746
+Total available items: 1351
+
+Top 10 Categories in Recommendations:
+computers accessories accessories peripherals cables accessories cables usbcables                        80
+electronics hometheater tv video televisions smarttelevisions                                            26
+electronics wearabletechnology smartwatches                                                              25
+computers accessories accessories peripherals keyboards mice inputdevices mice                           21
+home kitchen kitchen homeappliances vacuum cleaning ironing irons steamers accessories irons dryirons    18
+electronics hometheater tv video accessories cables hdmicables                                           18
+electronics hometheater tv video accessories remotecontrols                                              14
+home kitchen kitchen homeappliances vacuum cleaning ironing irons steamers accessories lintshavers       13
+home kitchen heating cooling airquality waterheaters geysers instantwaterheaters                         12
+electronics mobiles accessories smartphones basicmobiles smartphones                                     12
+```
+
+**Interpretasi:**
+- Nilai coverage sebesar **0.5522** berarti bahwa sistem rekomendasi mencakup sekitar **55.22%** dari seluruh produk yang tersedia.
+- Ini menandakan bahwa model tidak hanya merekomendasikan produk populer secara sempit, tetapi sudah cukup **beragam** dalam menyarankan produk dari berbagai jenis.
+
+---
+
+### **B. Distribusi Kategori Produk dalam Top-10 Rekomendasi**
+
+Visualisasi berikut menunjukkan kategori produk yang paling sering muncul dalam hasil rekomendasi:
+
+![Distribusi Kategori Produk](./download%20(24).png)
+
+**Observasi:**
+- Kategori terbanyak berasal dari sub-kategori **peripherals** seperti kabel USB dan mouse.
+- Produk elektronik seperti **smartwatch**, **televisi pintar**, dan **smartphone** juga banyak direkomendasikan.
+- Beberapa kategori rumah tangga seperti **penghisap debu**, **pemanas air**, dan **alat setrika** muncul dalam Top-10, menandakan keberagaman sektor yang dicakup.
+
+---
+
+### **C. Kesimpulan dari Coverage Evaluation**
+
+- Nilai coverage **> 50%** merupakan indikator positif bahwa model berhasil menjelajahi lebih dari separuh item yang tersedia.
+- Ini memperkuat asumsi bahwa model tidak sekadar menyarankan item-item paling populer saja.
+- Tingkat coverage yang tinggi juga berkontribusi terhadap **pengalaman pengguna yang lebih personal dan bervariasi**, karena produk yang ditampilkan tidak terbatas pada subset kecil dari katalog.
+
+Jika coverage rendah, maka pengguna cenderung melihat produk yang sama terus-menerus. Sebaliknya, coverage yang baik dapat meningkatkan peluang pengguna menemukan produk yang relevan namun belum dikenal.
+
+---
 
