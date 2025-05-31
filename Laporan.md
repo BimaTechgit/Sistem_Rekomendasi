@@ -809,5 +809,4 @@ Dengan pencapaian ini, sistem rekomendasi siap untuk diimplementasikan lebih lan
 Model yang dibuat masih dapat ditingkatkan lebih lanjut melalui teknik seperti hyperparameter tuning, penambahan data, atau modifikasi arsitektur model untuk dapat dilakukan untuk meningkatkan akurasinya. sehingga personalisasi dari model colaborative filtering bisa memberikan personalisasi lebih dalam berdasarkan preferensi pengguna.
 
 **---Ini adalah bagian akhir laporan---**
----
 
