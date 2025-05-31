@@ -687,7 +687,7 @@ Collaborative Filtering - RMSE: 0.1441
 Collaborative Filtering - MAE: 0.1098
 ```
 
-![download (27)](https://github.com/user-attachments/assets/7705565c-ddf4-41bd-9b03-b2b795c7309a)
+![download (28)](https://github.com/user-attachments/assets/0e95a3db-f9c4-4ae9-8fe6-356e0cd71c1e)
 
 Interpretasi:
 
@@ -695,10 +695,10 @@ Interpretasi:
 
 - Nilai error ini relatif kecil, sehingga model dinilai mampu menangkap hubungan antara user dan item secara efektif.
 
-- Nilai **RMSE = 0.1439** mengindikasikan bahwa akar rata-rata kuadrat kesalahan cukup rendah, yang berarti model cukup baik dalam menangani error besar.
-- Nilai **MAE = 0.1096** juga menunjukkan bahwa rata-rata selisih absolut antara prediksi dan nilai aktual tergolong rendah, menandakan stabilitas prediksi model.
+- Nilai **RMSE = 0.1441** mengindikasikan bahwa akar rata-rata kuadrat kesalahan cukup rendah, yang berarti model cukup baik dalam menangani error besar.
+- Nilai **MAE = 0.1098** juga menunjukkan bahwa rata-rata selisih absolut antara prediksi dan nilai aktual tergolong rendah, menandakan stabilitas prediksi model.
 
-RMSE = 0.1439 dan MAE = 0.1096 menunjukkan bahwa model memberikan prediksi yang cukup akurat terhadap preferensi user. Secara keseluruhan, hasil ini menunjukkan bahwa model Collaborative Filtering yang dikembangkan mampu memberikan performa prediksi yang baik, meskipun masih dapat ditingkatkan lebih lanjut melalui teknik seperti hyperparameter tuning, penambahan data, atau modifikasi arsitektur model.
+RMSE = 0.1441 dan MAE = 0.1098 menunjukkan bahwa model memberikan prediksi yang cukup akurat terhadap preferensi user. Secara keseluruhan, hasil ini menunjukkan bahwa model Collaborative Filtering yang dikembangkan mampu memberikan performa prediksi yang baik, meskipun masih dapat ditingkatkan lebih lanjut melalui teknik seperti hyperparameter tuning, penambahan data, atau modifikasi arsitektur model.
 
 #### **C. Coverage@K**
 
@@ -767,7 +767,7 @@ Jika coverage rendah, maka pengguna cenderung melihat produk yang sama terus-men
 |-------|--------|------------|
 | **1. Membangun sistem rekomendasi berbasis Collaborative Filtering.** | ✅ Tercapai | Sistem telah berhasil dibangun menggunakan pendekatan neural collaborative filtering, memanfaatkan data interaksi pengguna dan produk. |
 | **2. Mengatasi sparsity dengan embedding & neural network.** | ✅ Tercapai | Embedding layer secara efektif mempelajari representasi user-item.  |
-| **3. Evaluasi dengan metrik RMSE, MAE, dan Coverage.** | ✅ Tercapai | Evaluasi menunjukkan hasil yang baik: <br>• `RMSE = 0.1439` <br>• `MAE = 0.1096` <br>• `Coverage@10 = 0.5522` Ini menunjukkan akurasi tinggi dan keragaman rekomendasi yang baik. |
+| **3. Evaluasi dengan metrik RMSE, MAE, dan Coverage.** | ✅ Tercapai | Evaluasi menunjukkan hasil yang baik: <br>• `RMSE = 0.1441` <br>• `MAE = 0.1098` <br>• `Coverage@10 = 0.5522` Ini menunjukkan akurasi tinggi dan keragaman rekomendasi yang baik. |
 
 ---
 
