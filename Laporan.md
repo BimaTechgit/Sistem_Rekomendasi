@@ -596,3 +596,7 @@ Showing recommendations for user: AGE6O2NLNA3NUGORPU4SDK2S23QQ
 | 7 | B082DJDCPX | swapkart fast charging cable and data sync usb... | computers accessories accessories peripherals ... | 0.571472 |
 | 8 | B09F6KL23R | skytone stainless steel electric meat grinders... | home kitchen kitchen homeappliances smallkitch... | 0.571225 |
 | 9 | B09GBBJVL2 | hp 330 wireless black keyboard and mouse set w... | computers accessories accessories peripherals ... | 0.570087 |
+
+berdasarkan hasil tabel rekomendasi yang telah dibuat, diketahui bahwa produk dengan rating tinggi yang pernah diberi oleh user (misalnya rating 4.1 pada kabel OnePlus) digunakan sebagai referensi pola preferensi pengguna.
+
+melalui prediksi tersebut, Sistem berhasil merekomendasikan beragam kategori produk yang sebelumnya belum pernah diberi rating oleh user, dan semuanya memiliki prediksi rating > 0.57 dalam skala 0–1. Ini menunjukkan bahwa sistem memprioritaskan produk dengan estimasi ketertarikan pengguna yang tinggi.  Ini menunjukkan bahwa model yang dibangun telah belajar representasi user-product yang bermakna, dan dapat digunakan untuk membantu pengguna menemukan produk baru yang sesuai preferensi mereka.
