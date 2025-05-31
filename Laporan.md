@@ -703,25 +703,25 @@ RMSE = 0.1441 dan MAE = 0.1098 menunjukkan bahwa model memberikan prediksi yang 
 #### **C. Coverage@K**
 
 ```python
-Coverage @ 10: 0.5522
-Total recommended items: 746
+Coverage @ 10: 0.5574
+Total recommended items: 753
 Total available items: 1351
 
 Top 10 Categories in Recommendations:
-computers accessories accessories peripherals cables accessories cables usbcables                        80
-electronics hometheater tv video televisions smarttelevisions                                            26
-electronics wearabletechnology smartwatches                                                              25
+computers accessories accessories peripherals cables accessories cables usbcables                        81
+electronics hometheater tv video televisions smarttelevisions                                            29
+electronics wearabletechnology smartwatches                                                              22
 computers accessories accessories peripherals keyboards mice inputdevices mice                           21
+electronics hometheater tv video accessories cables hdmicables                                           19
 home kitchen kitchen homeappliances vacuum cleaning ironing irons steamers accessories irons dryirons    18
-electronics hometheater tv video accessories cables hdmicables                                           18
-electronics hometheater tv video accessories remotecontrols                                              14
-home kitchen kitchen homeappliances vacuum cleaning ironing irons steamers accessories lintshavers       13
-home kitchen heating cooling airquality waterheaters geysers instantwaterheaters                         12
-electronics mobiles accessories smartphones basicmobiles smartphones                                     12
+electronics mobiles accessories smartphones basicmobiles smartphones                                     15
+electronics hometheater tv video accessories remotecontrols                                              15
+home kitchen kitchen homeappliances vacuum cleaning ironing irons steamers accessories lintshavers       15
+home kitchen kitchen homeappliances smallkitchenappliances handblenders                                  12
 ```
 
 **Interpretasi:**
-- Nilai coverage sebesar **0.5522** berarti bahwa sistem rekomendasi mencakup sekitar **55.22%** dari seluruh produk yang tersedia.
+- Nilai coverage sebesar **0.5574** berarti bahwa sistem rekomendasi mencakup sekitar **55.74%** dari seluruh produk yang tersedia.
 - Ini menandakan bahwa model tidak hanya merekomendasikan produk populer secara sempit, tetapi sudah cukup **beragam** dalam menyarankan produk dari berbagai jenis.
 
 ---
@@ -767,7 +767,7 @@ Jika coverage rendah, maka pengguna cenderung melihat produk yang sama terus-men
 |-------|--------|------------|
 | **1. Membangun sistem rekomendasi berbasis Collaborative Filtering.** | ✅ Tercapai | Sistem telah berhasil dibangun menggunakan pendekatan neural collaborative filtering, memanfaatkan data interaksi pengguna dan produk. |
 | **2. Mengatasi sparsity dengan embedding & neural network.** | ✅ Tercapai | Embedding layer secara efektif mempelajari representasi user-item.  |
-| **3. Evaluasi dengan metrik RMSE, MAE, dan Coverage.** | ✅ Tercapai | Evaluasi menunjukkan hasil yang baik: <br>• `RMSE = 0.1441` <br>• `MAE = 0.1098` <br>• `Coverage@10 = 0.5522` Ini menunjukkan akurasi tinggi dan keragaman rekomendasi yang baik. |
+| **3. Evaluasi dengan metrik RMSE, MAE, dan Coverage.** | ✅ Tercapai | Evaluasi menunjukkan hasil yang baik: <br>• `RMSE = 0.1441` <br>• `MAE = 0.1098` <br>• `Coverage@10 = 0.5574` Ini menunjukkan akurasi tinggi dan keragaman rekomendasi yang baik. |
 
 ---
 
@@ -776,7 +776,7 @@ Jika coverage rendah, maka pengguna cenderung melihat produk yang sama terus-men
 | Solusi | Dampak & Bukti |
 |--------|----------------|
 | **1. Penggunaan NCF dan embedding.** | Memberikan dampak signifikan terhadap kualitas representasi pengguna dan item, serta memperbaiki masalah sparsity. Hal ini dibuktikan dari nilai MAE & RMSE yang rendah, menunjukkan prediksi model sangat dekat dengan nilai aktual. |
-| **2. Evaluasi menggunakan RMSE, MAE, Coverage.** | ✅ Evaluasi komprehensif ini tidak hanya menilai akurasi prediksi, tetapi juga menilai seberapa beragam dan luas model menjangkau produk, dibuktikan dengan coverage di atas 55%, yang berarti lebih dari separuh produk berhasil dijangkau oleh sistem rekomendasi. |
+| **2. Evaluasi menggunakan RMSE, MAE, Coverage.** | ✅ Evaluasi komprehensif ini tidak hanya menilai akurasi prediksi, tetapi juga menilai seberapa beragam dan luas model menjangkau produk, dibuktikan dengan coverage di atas 50%, yang berarti lebih dari separuh produk berhasil dijangkau oleh sistem rekomendasi. |
 
 ---
 
