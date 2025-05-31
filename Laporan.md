@@ -751,19 +751,19 @@ Jika coverage rendah, maka pengguna cenderung melihat produk yang sama terus-men
 
 | Problem Statement | Pemenuhan Solusi | Penjelasan |
 |-------------------|------------------|------------|
-| **1. Sistem belum memberikan rekomendasi yang personal.** | ✅ Ya | Model Collaborative Filtering berhasil memahami preferensi individual pengguna berdasarkan interaksi historis. |
-| **2. Interaksi user-item bersifat sparse (jarang).** | ✅ Ya | Dengan pendekatan Neural Collaborative Filtering (NCF) dan embedding, model dapat menangani sparsity dengan efisien. |
-| **3. Tidak ada evaluasi metrik yang komprehensif.** | ✅ Ya | Evaluasi telah dilakukan secara terstruktur menggunakan metrik RMSE, MAE, dan Coverage@10. |
+| **1. Sistem belum memberikan rekomendasi yang personal.** | ✅ Ya | MModel berbasis Collaborative Filtering berhasil mempelajari preferensi pengguna berdasarkan interaksi historis, menghasilkan rekomendasi yang spesifik dan personal terhadap perilaku masing-masing user. |
+| **2. Interaksi user-item bersifat sparse.** | ✅ Ya | Dengan menggunakan pendekatan Neural Collaborative Filtering (NCF) dan teknik embedding, model dapat mengatasi sparsity dengan menyandikan relasi user-item secara lebih efisien. |
+| **3. Tidak ada evaluasi metrik yang komprehensif.** | ✅ Ya | Proyek ini mengevaluasi hasil rekomendasi menggunakan tiga metrik utama: RMSE, MAE, dan Coverage@10—yang memberikan pengukuran menyeluruh terhadap akurasi dan keragaman rekomendasi. |
 
 ---
 
-## 2. 🎯 Apakah Berhasil Mencapai Setiap Goals?
+## 2. 🎯 Apakah Berhasil Mencapai Setiap Goals yang diharapkan?
 
 | Goals | Status | Penjelasan |
 |-------|--------|------------|
-| **1. Membangun sistem rekomendasi berbasis Collaborative Filtering.** | ✅ Tercapai | Sistem dibangun menggunakan pendekatan NCF dan telah berjalan sesuai rencana. |
-| **2. Mengatasi sparsity dengan embedding & neural network.** | ✅ Tercapai | Embedding layer secara efektif mempelajari representasi user-item. |
-| **3. Evaluasi dengan metrik RMSE, MAE, dan Coverage.** | ✅ Tercapai | Evaluasi menunjukkan hasil yang baik: <br>• `RMSE = 0.1439` <br>• `MAE = 0.1096` <br>• `Coverage@10 = 0.5522` |
+| **1. Membangun sistem rekomendasi berbasis Collaborative Filtering.** | ✅ Tercapai | Sistem telah berhasil dibangun menggunakan pendekatan neural collaborative filtering, memanfaatkan data interaksi pengguna dan produk. |
+| **2. Mengatasi sparsity dengan embedding & neural network.** | ✅ Tercapai | Embedding layer secara efektif mempelajari representasi user-item.  |
+| **3. Evaluasi dengan metrik RMSE, MAE, dan Coverage.** | ✅ Tercapai | Evaluasi menunjukkan hasil yang baik: <br>• `RMSE = 0.1439` <br>• `MAE = 0.1096` <br>• `Coverage@10 = 0.5522` Ini menunjukkan akurasi tinggi dan keragaman rekomendasi yang baik. |
 
 ---
 
