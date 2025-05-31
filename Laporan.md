@@ -747,7 +747,7 @@ Jika coverage rendah, maka pengguna cenderung melihat produk yang sama terus-men
 
 # 🔍 Kesimpulan Akhir Proyek Sistem Rekomendasi Berbasis Collaborative Filtering
 
-## 1. ✅ Apakah Sudah Menjawab Setiap Problem Statement?
+## 1. Apakah Sudah Menjawab Setiap Problem Statement?
 
 | Problem Statement | Pemenuhan Solusi | Penjelasan |
 |-------------------|------------------|------------|
@@ -757,7 +757,7 @@ Jika coverage rendah, maka pengguna cenderung melihat produk yang sama terus-men
 
 ---
 
-## 2. 🎯 Apakah Berhasil Mencapai Setiap Goals yang diharapkan?
+## 2. Apakah Berhasil Mencapai Setiap Goals yang diharapkan?
 
 | Goals | Status | Penjelasan |
 |-------|--------|------------|
@@ -767,7 +767,7 @@ Jika coverage rendah, maka pengguna cenderung melihat produk yang sama terus-men
 
 ---
 
-## 3. 🧠 Apakah Setiap Solution Statement Berdampak?
+## 3. Apakah Setiap Solution Statement Berdampak?
 
 | Solusi | Dampak & Bukti |
 |--------|----------------|
@@ -776,7 +776,7 @@ Jika coverage rendah, maka pengguna cenderung melihat produk yang sama terus-men
 
 ---
 
-## 📌 Keselarasan dengan Business Understanding
+## Keselarasan dengan Business Understanding
 
 Proyek ini **selaras secara menyeluruh** dengan tujuan bisnis:
 
@@ -791,9 +791,9 @@ Proyek ini **selaras secara menyeluruh** dengan tujuan bisnis:
 
 Model sistem rekomendasi berbasis **Neural Collaborative Filtering (NCF)** yang telah dibangun berhasil menjawab kebutuhan bisnis dalam menyediakan sistem rekomendasi yang akurat, personal, dan beragam. Evaluasi dengan RMSE, MAE, dan Coverage membuktikan bahwa:
 
-- 🎯 **Tingkat akurasi prediksi yang tinggi**, ditunjukkan oleh nilai RMSE dan MAE yang sangat rendah.
-- 🔄 **Ragam rekomendasi yang luas**, Rekomendasi tidak terbatas pada item populer, melainkan tersebar ke berbagai kategori produk.
-- 🤝 **Personalisasi rekomendasi yang efektif**, Sistem mendekatkan pengguna dengan produk yang sesuai dengan preferensinya dan berhasil menciptakan pengalaman pengguna yang lebih relevan dan variatif, yang pada akhirnya dapat meningkatkan engagement dan konversi di platform e-commerce.
+- **Tingkat akurasi prediksi yang tinggi**, ditunjukkan oleh nilai RMSE dan MAE yang sangat rendah.
+- **Ragam rekomendasi yang luas**, Rekomendasi tidak terbatas pada item populer, melainkan tersebar ke berbagai kategori produk.
+- **Personalisasi rekomendasi yang efektif**, Sistem mendekatkan pengguna dengan produk yang sesuai dengan preferensinya dan berhasil menciptakan pengalaman pengguna yang lebih relevan dan variatif, yang pada akhirnya dapat meningkatkan engagement dan konversi di platform e-commerce.
 
 > Dengan pencapaian ini, sistem rekomendasi siap untuk diimplementasikan lebih lanjut, baik dalam skala terbatas (A/B testing) maupun integrasi penuh ke dalam sistem e-commerce yang ada.
 
