@@ -568,7 +568,15 @@ Model yang digunakan adalah Neural Collaborative Filtering, yaitu model pembelaj
 
 - Latihannya Lambat: Dibanding model klasik seperti matrix factorization, training membutuhkan waktu lebih lama.
 
+
 ### **Output Collaborative Filtering:**
+
+```python
+Final Validation Loss (MSE): 0.0240
+Final Validation RMSE): 0.1439
+```
+
+![download (26)](https://github.com/user-attachments/assets/4a0e1d47-99e1-4997-8e02-b2ccb126bf30)
 
 Showing recommendations for user: AGE6O2NLNA3NUGORPU4SDK2S23QQ
 
