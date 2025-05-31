@@ -568,13 +568,17 @@ Model yang digunakan adalah Neural Collaborative Filtering, yaitu model pembelaj
 
 - Latihannya Lambat: Dibanding model klasik seperti matrix factorization, training membutuhkan waktu lebih lama.
 
-Rekomendasi untuk Pengguna: AGE02NLNA3NUGORPU4SDK2S23QQ
+Showing recommendations for user: AGE6O2NLNA3NUGORPU4SDK2S23QQ
+
+===========================================================================================================================
 
 **Top Produk yang Dinilai Tinggi oleh Pengguna:**
 
 | | product_id | product_name | category | rating |
 |---|---|---|---|---|
 | 568 | B0B5ZF3NRK | cedo 65w oneplus dash warp charge cable usb a... | computers accessories accessories peripherals ... | 4.1 |
+
+===========================================================================================================================
 
 **Top 10 Rekomendasi Produk:**
 
