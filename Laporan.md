@@ -726,7 +726,7 @@ electronics mobiles accessories smartphones basicmobiles smartphones            
 
 ---
 
-### **B. Distribusi Kategori Produk dalam Top-10 Rekomendasi**
+### **B. Distribusi Kategori Produk dalam Top-10 Rekomendasi berdasarkan evaluasi Coverage@K:**
 
 Visualisasi berikut menunjukkan kategori produk yang paling sering muncul dalam hasil rekomendasi:
 
