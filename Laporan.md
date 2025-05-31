@@ -24,7 +24,7 @@ Mengingat peran penting sistem rekomendasi dalam meningkatkan pengalaman penggun
 
 ## **Problem Statement**
 
-Berdasarkan latar belakang yang dibahas, berikut ini adalah pernyataan masalah yang dihadapi tentang perfoma belajar siswa:
+Berdasarkan latar belakang yang dibahas, berikut ini adalah pernyataan masalah yang dihadapi:
 
 1. Sistem e-commerce kurang mampu memberikan rekomendasi produk yang relevan secara personal kepada masing-masing pengguna.
 
@@ -745,7 +745,7 @@ Jika coverage rendah, maka pengguna cenderung melihat produk yang sama terus-men
 
 ---
 
-# 🔍 Kesimpulan Akhir Proyek Sistem Rekomendasi Berbasis Collaborative Filtering
+# Kesimpulan Akhir Proyek Sistem Rekomendasi Berbasis Collaborative Filtering
 
 ## 1. Apakah Sudah Menjawab Setiap Problem Statement?
 
@@ -791,11 +791,16 @@ Proyek ini **selaras secara menyeluruh** dengan tujuan bisnis:
 
 Model sistem rekomendasi berbasis **Neural Collaborative Filtering (NCF)** yang telah dibangun berhasil menjawab kebutuhan bisnis dalam menyediakan sistem rekomendasi yang akurat, personal, dan beragam. Evaluasi dengan RMSE, MAE, dan Coverage membuktikan bahwa:
 
-- **Tingkat akurasi prediksi yang tinggi**, ditunjukkan oleh nilai RMSE dan MAE yang sangat rendah.
+- **Tingkat akurasi prediksi yang tinggi**, ditunjukkan oleh nilai RMSE dan MAE yang sangat rendah menunujukan mampu memprediksi rating dengan kesalahan minimal.
 - **Ragam rekomendasi yang luas**, Rekomendasi tidak terbatas pada item populer, melainkan tersebar ke berbagai kategori produk.
 - **Personalisasi rekomendasi yang efektif**, Sistem mendekatkan pengguna dengan produk yang sesuai dengan preferensinya dan berhasil menciptakan pengalaman pengguna yang lebih relevan dan variatif, yang pada akhirnya dapat meningkatkan engagement dan konversi di platform e-commerce.
 
-> Dengan pencapaian ini, sistem rekomendasi siap untuk diimplementasikan lebih lanjut, baik dalam skala terbatas (A/B testing) maupun integrasi penuh ke dalam sistem e-commerce yang ada.
+Dengan pencapaian ini, sistem rekomendasi siap untuk diimplementasikan lebih lanjut, baik dalam skala terbatas (A/B testing) maupun integrasi penuh ke dalam sistem e-commerce yang ada.
 
+## Saran
+
+Model yang dibuat masih dapat ditingkatkan lebih lanjut melalui teknik seperti hyperparameter tuning, penambahan data, atau modifikasi arsitektur model untuk dapat dilakukan untuk meningkatkan akurasinya. sehingga personalisasi dari model colaborative filtering bisa memberikan personalisasi lebih dalam berdasarkan preferensi pengguna.
+
+**---Ini adalah bagian akhir laporan---**
 ---
 
