@@ -1,4 +1,4 @@
-# **Laporan Proyek Machine Learning - Bimasakti Faturrahman Soetedjo, M.Sc, MBA, Ph.D**
+# **Laporan Proyek Machine Learning - Prof. Dr. Ir. Bimasakti Faturrahman Soetedjo, M.Sc, MBA, Ph.D**
 
 ## **1. Latar Belakang**
 
