@@ -691,12 +691,11 @@ Interpretasi:
 
 - Karena data rating telah dinormalisasi ke skala 0–1, maka nilai RMSE dan MAE dalam konteks ini juga berada dalam rentang tersebut.
 
-- RMSE = 0.1439 dan MAE = 0.1096 menunjukkan bahwa model memberikan prediksi yang cukup akurat terhadap preferensi user.
-
 - Nilai error ini relatif kecil, sehingga model dinilai mampu menangkap hubungan antara user dan item secara efektif.
 
-- RMSE = 0.1439 menunjukkan bahwa rata-rata akar kesalahan prediksi dari model relatif kecil, dan model berhasil menghindari error yang terlalu besar.
+- Nilai **RMSE = 0.1439** mengindikasikan bahwa akar rata-rata kuadrat kesalahan cukup rendah, yang berarti model cukup baik dalam menangani error besar.
+- Nilai **MAE = 0.1096** juga menunjukkan bahwa rata-rata selisih absolut antara prediksi dan nilai aktual tergolong rendah, menandakan stabilitas prediksi model.
 
-- MAE = 0.1096 menunjukkan bahwa rata-rata deviasi absolut antara nilai prediksi dan aktual juga cukup kecil, yang menandakan bahwa model secara umum memberikan prediksi yang cukup dekat dengan nilai sebenarnya.
+RMSE = 0.1439 dan MAE = 0.1096 menunjukkan bahwa model memberikan prediksi yang cukup akurat terhadap preferensi user. Secara keseluruhan, hasil ini menunjukkan bahwa model Collaborative Filtering yang dikembangkan mampu memberikan performa prediksi yang baik, meskipun masih dapat ditingkatkan lebih lanjut melalui teknik seperti hyperparameter tuning, penambahan data, atau modifikasi arsitektur model.
 
 
