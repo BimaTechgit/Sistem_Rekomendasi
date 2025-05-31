@@ -607,7 +607,7 @@ Showing recommendations for user: AGE6O2NLNA3NUGORPU4SDK2S23QQ
 
 berdasarkan hasil tabel rekomendasi yang telah dibuat, diketahui bahwa produk dengan rating tinggi yang pernah diberi oleh user (misalnya rating 4.1 pada kabel OnePlus) digunakan sebagai referensi pola preferensi pengguna.
 
-melalui prediksi tersebut, Sistem berhasil merekomendasikan beragam kategori produk yang sebelumnya belum pernah diberi rating oleh user, dan semuanya memiliki prediksi rating > 0.57 dalam skala 0–1. Ini menunjukkan bahwa sistem memprioritaskan produk dengan estimasi ketertarikan pengguna yang tinggi.  Ini menunjukkan bahwa model yang dibangun telah belajar representasi user-product yang bermakna, dan dapat digunakan untuk membantu pengguna menemukan produk baru yang sesuai preferensi mereka.
+melalui prediksi tersebut, Sistem berhasil merekomendasikan beragam kategori produk yang sebelumnya belum pernah diberi rating oleh user, dan semuanya memiliki prediksi rating > 0.55 dalam skala 0–1. Ini menunjukkan bahwa sistem memprioritaskan produk dengan estimasi ketertarikan pengguna yang tinggi. Ini menunjukkan bahwa model yang dibangun telah belajar representasi user-product yang bermakna, dan dapat digunakan untuk membantu pengguna menemukan produk baru yang sesuai preferensi mereka.
 
 
 ## 📈 **Evaluasi Model**
@@ -630,7 +630,6 @@ $$
 - $y_i$: nilai rating aktual pada sampel ke-\(i\)
 - $\hat{y}_i$: nilai rating hasil prediksi model pada sampel ke-\(i\)
 - $n$: jumlah total data (sampel)
-- $i$ adalah indeks sampel.
 
 **Interpretasi:**
 - Nilai RMSE yang **kecil** menunjukkan model memiliki performa yang baik dalam memprediksi nilai yang mendekati rating aktual.
