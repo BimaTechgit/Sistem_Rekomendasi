@@ -506,7 +506,7 @@ print(df.columns)
 
 ## **Modeling**
 
-### **RecommenderNet (Custom Collaborative Filtering)**
+### **Neutral Collaborative Filtering**
 
 Model yang digunakan adalah Neural Collaborative Filtering, yaitu model pembelajaran mendalam yang memetakan user dan produk ke dalam embedding vector berdimensi tetap, kemudian mengalkulasi dot product antar keduanya untuk memperkirakan rating:
 
