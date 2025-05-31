@@ -733,7 +733,7 @@ Visualisasi berikut menunjukkan kategori produk yang paling sering muncul dalam 
 ![download (24)](https://github.com/user-attachments/assets/ac1263ae-9039-49e7-82a5-a173d0738074)
 
 **Observasi:**
-- Kategori terbanyak berasal dari sub-kategori **peripherals** seperti kabel USB dan mouse.
+- Kategori terbanyak berasal dari sub-kategori **computer & accessories** seperti kabel USB dan mouse.
 - Produk elektronik seperti **smartwatch**, **televisi pintar**, dan **smartphone** juga banyak direkomendasikan.
 - Beberapa kategori rumah tangga seperti **penghisap debu**, **pemanas air**, dan **alat setrika** muncul dalam Top-10, menandakan keberagaman sektor yang dicakup.
 
