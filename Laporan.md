@@ -577,7 +577,7 @@ Model yang digunakan adalah Neural Collaborative Filtering, yaitu model pembelaj
 
 ```python
 Final Validation Loss (MSE): 0.0241
-Final Validation RMSE): 0.1441
+Final Validation (RMSE): 0.1441
 ```
 
 ![download (26)](https://github.com/user-attachments/assets/7742a3ce-4934-45a7-992d-9f324e596c26)
