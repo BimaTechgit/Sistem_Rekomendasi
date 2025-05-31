@@ -726,7 +726,7 @@ electronics mobiles accessories smartphones basicmobiles smartphones            
 
 Visualisasi berikut menunjukkan kategori produk yang paling sering muncul dalam hasil rekomendasi:
 
-![Distribusi Kategori Produk](./download%20(24).png)
+![download (24)](https://github.com/user-attachments/assets/ac1263ae-9039-49e7-82a5-a173d0738074)
 
 **Observasi:**
 - Kategori terbanyak berasal dari sub-kategori **peripherals** seperti kabel USB dan mouse.
