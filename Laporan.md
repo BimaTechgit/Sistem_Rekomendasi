@@ -676,9 +676,11 @@ Ketarangan:
 - **Numerator**: jumlah item unik yang muncul dalam semua daftar Top-K hasil rekomendasi
 - **Denominator**: total jumlah item unik yang tersedia di dataset
 
-## 📊 2. Hasil Evaluasi Model
+## 📊 Hasil Evaluasi Model
 
 Evaluasi dilakukan pada data validasi, menggunakan hasil prediksi model Collaborative Filtering. Nilai-nilai metrik dihitung sebagai berikut:
+
+#### **RSME dan MAE**
 
 ```python
 Collaborative Filtering - RMSE: 0.1439
@@ -697,6 +699,8 @@ Interpretasi:
 - Nilai **MAE = 0.1096** juga menunjukkan bahwa rata-rata selisih absolut antara prediksi dan nilai aktual tergolong rendah, menandakan stabilitas prediksi model.
 
 RMSE = 0.1439 dan MAE = 0.1096 menunjukkan bahwa model memberikan prediksi yang cukup akurat terhadap preferensi user. Secara keseluruhan, hasil ini menunjukkan bahwa model Collaborative Filtering yang dikembangkan mampu memberikan performa prediksi yang baik, meskipun masih dapat ditingkatkan lebih lanjut melalui teknik seperti hyperparameter tuning, penambahan data, atau modifikasi arsitektur model.
+
+#### **C. Coverage@K**
 
 ```python
 Coverage @ 10: 0.5522
