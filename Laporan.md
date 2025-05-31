@@ -572,11 +572,11 @@ Model yang digunakan adalah Neural Collaborative Filtering, yaitu model pembelaj
 ### **Output Collaborative Filtering:**
 
 ```python
-Final Validation Loss (MSE): 0.0240
-Final Validation RMSE): 0.1439
+Final Validation Loss (MSE): 0.0241
+Final Validation RMSE): 0.1441
 ```
 
-![download (26)](https://github.com/user-attachments/assets/4a0e1d47-99e1-4997-8e02-b2ccb126bf30)
+![download (26)](https://github.com/user-attachments/assets/7742a3ce-4934-45a7-992d-9f324e596c26)
 
 Showing recommendations for user: AGE6O2NLNA3NUGORPU4SDK2S23QQ
 
@@ -594,16 +594,16 @@ Showing recommendations for user: AGE6O2NLNA3NUGORPU4SDK2S23QQ
 
 | | product_id | product_name | category | predicted_rating |
 |---|---|---|---|---|
-| 0 | B08SCCG9D4 | jbl commercial cslm20b auxiliary omnidirection... | computers accessories accessories peripherals ... | 0.574407 |
-| 1 | B09SPTING8 | crompton saga sapphira 1200 mm ultra high speed... | home kitchen heating cooling airquality fans c... | 0.573836 |
-| 2 | B0B56YRBNC | tecno spark 9 sky mirror 6gb ram 128gb storage... | electronics mobiles accessories smartphones ba... | 0.573110 |
-| 3 | B08YRMBK9R | candes 10 litre perfecto 5 star rated automati... | home kitchen heating cooling airquality waterh... | 0.572954 |
-| 4 | B07SRM87TP | agaro regal 800 watts handheld vacuum cleaner ... | home kitchen kitchen homeappliances vacuum cle... | 0.572752 |
-| 5 | B079Y6JZC8 | zebronics zeb comfort wired usb mouse 3 button... | computers accessories accessories peripherals ... | 0.572065 |
-| 6 | B09XJ5LD6L | samsung galaxy m53 5g deep ocean blue 6gb 128g... | electronics mobiles accessories smartphones ba... | 0.571634 |
-| 7 | B082DJDCPX | swapkart fast charging cable and data sync usb... | computers accessories accessories peripherals ... | 0.571472 |
-| 8 | B09F6KL23R | skytone stainless steel electric meat grinders... | home kitchen kitchen homeappliances smallkitch... | 0.571225 |
-| 9 | B09GBBJVL2 | hp 330 wireless black keyboard and mouse set w... | computers accessories accessories peripherals ... | 0.570087 |
+| 0 | B07WMS7TWB | pigeon by stovekraft amaze plus electric kettl... | home kitchen kitchen homeappliances smallkitch... | 0.570694 |
+| 1 | B0B12KBPM | zebronics zeb astra 20 wireless bt v5 0 portab... | electronics homeaudio speakers bluetoothspeakers | 0.570185 |
+| 2 | B071VMP1Z4 | inripli compatible sony bravia lcd led remote wo... | electronics hometheater tv video accessories r... | 0.569737 |
+| 3 | B083M7WPZD | agaro 33398 rapid 1000 watt 10 litre wet dry v... | home kitchen kitchen homeappliances vacuum cle... | 0.569318 |
+| 4 | B07RX42D3D | tosaa t2stsr sandwich gas toaster regular black | home kitchen kitchen homeappliances smallkitch... | 0.569260 |
+| 5 | B07DJLFMPS | hp 32gb class 10 microsd memory card u1 tf car... | electronics accessories memorycards microsd | 0.568389 |
+| 6 | B085LPT5F4 | solidaire 550 watt mixer grinder with 3 jars b... | home kitchen kitchen homeappliances smallkitch... | 0.568382 |
+| 7 | B08VGDBF3B | kuber industries round non woven fabric foldab... | home kitchen homestorage organization laundryo... | 0.568241 |
+| 8 | B082DJDCPX | swapkart fast charging cable and data sync usb... | computers accessories accessories peripherals ... | 0.568208 |
+| 9 | B096MSW6CT | sounce fast phone charging cable data sync usb... | computers accessories accessories peripherals ... | 0.567745 |
 
 berdasarkan hasil tabel rekomendasi yang telah dibuat, diketahui bahwa produk dengan rating tinggi yang pernah diberi oleh user (misalnya rating 4.1 pada kabel OnePlus) digunakan sebagai referensi pola preferensi pengguna.
 
@@ -683,11 +683,11 @@ Evaluasi dilakukan pada data validasi, menggunakan hasil prediksi model Collabor
 #### **RSME dan MAE**
 
 ```python
-Collaborative Filtering - RMSE: 0.1439
-Collaborative Filtering - MAE: 0.1096
+Collaborative Filtering - RMSE: 0.1441
+Collaborative Filtering - MAE: 0.1098
 ```
 
-![download (27)](https://github.com/user-attachments/assets/529e45bf-0a8a-4dd4-8bd1-606f7273dafd)
+![download (27)](https://github.com/user-attachments/assets/7705565c-ddf4-41bd-9b03-b2b795c7309a)
 
 Interpretasi:
 
