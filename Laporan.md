@@ -771,8 +771,8 @@ Jika coverage rendah, maka pengguna cenderung melihat produk yang sama terus-men
 
 | Solusi | Dampak & Bukti |
 |--------|----------------|
-| **1. Penggunaan NCF dan embedding.** | ✅ Model lebih akurat dalam memahami user-item, terbukti dari nilai RMSE dan MAE yang rendah. |
-| **2. Evaluasi menggunakan RMSE, MAE, Coverage.** | ✅ Sistem dinilai tidak hanya dari akurasi, tetapi juga keragaman rekomendasi (coverage > 55%). |
+| **1. Penggunaan NCF dan embedding.** | Memberikan dampak signifikan terhadap kualitas representasi pengguna dan item, serta memperbaiki masalah sparsity. Hal ini dibuktikan dari nilai MAE & RMSE yang rendah, menunjukkan prediksi model sangat dekat dengan nilai aktual. |
+| **2. Evaluasi menggunakan RMSE, MAE, Coverage.** | ✅ Evaluasi komprehensif ini tidak hanya menilai akurasi prediksi, tetapi juga menilai seberapa beragam dan luas model menjangkau produk, dibuktikan dengan coverage di atas 55%, yang berarti lebih dari separuh produk berhasil dijangkau oleh sistem rekomendasi. |
 
 ---
 
@@ -789,11 +789,11 @@ Proyek ini **selaras secara menyeluruh** dengan tujuan bisnis:
 
 ## 🧾 Kesimpulan Akhir
 
-Model sistem rekomendasi berbasis **Neural Collaborative Filtering (NCF)** yang dibangun telah menunjukkan:
+Model sistem rekomendasi berbasis **Neural Collaborative Filtering (NCF)** yang telah dibangun berhasil menjawab kebutuhan bisnis dalam menyediakan sistem rekomendasi yang akurat, personal, dan beragam. Evaluasi dengan RMSE, MAE, dan Coverage membuktikan bahwa:
 
 - 🎯 **Tingkat akurasi prediksi yang tinggi**, ditunjukkan oleh nilai RMSE dan MAE yang sangat rendah.
-- 🔄 **Ragam rekomendasi yang luas**, dengan nilai Coverage@10 sebesar **0.5522**, berarti sistem berhasil merekomendasikan lebih dari 55% produk unik dari seluruh katalog.
-- 🤝 **Personalisasi rekomendasi yang efektif**, mendekatkan pengguna dengan produk yang sesuai dengan preferensinya.
+- 🔄 **Ragam rekomendasi yang luas**, Rekomendasi tidak terbatas pada item populer, melainkan tersebar ke berbagai kategori produk.
+- 🤝 **Personalisasi rekomendasi yang efektif**, Sistem mendekatkan pengguna dengan produk yang sesuai dengan preferensinya dan berhasil menciptakan pengalaman pengguna yang lebih relevan dan variatif, yang pada akhirnya dapat meningkatkan engagement dan konversi di platform e-commerce.
 
 > Dengan pencapaian ini, sistem rekomendasi siap untuk diimplementasikan lebih lanjut, baik dalam skala terbatas (A/B testing) maupun integrasi penuh ke dalam sistem e-commerce yang ada.
 
