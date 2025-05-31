@@ -206,9 +206,7 @@ Di sisi lain, ada beberapa kategori rumah tangga seperti Mixer Grinders dan Dry 
 
 Secara keseluruhan, grafik ini memberikan gambaran yang jelas tentang preferensi konsumen di era digital saat ini. Kategori elektronik mendominasi daftar terpopuler, mencerminkan tren global menuju gaya hidup yang lebih cerdas dan terhubung. Namun, produk rumah tangga tradisional tetap memiliki tempat tersendiri dalam kehidupan konsumen. Informasi ini sangat berguna untuk membangun sistem rekomendasi yang lebih relevan, karena kita dapat memprioritaskan rekomendasi berdasarkan kategori yang paling banyak diminati, seperti kabel USB, smartwatches, atau smart TVs, sambil tetap mempertimbangkan produk rumah tangga sebagai opsi tambahan bagi pengguna dengan minat yang lebih spesifik. Dengan pemahaman ini, bisnis dapat lebih efektif dalam menargetkan kebutuhan konsumen dan meningkatkan pengalaman belanja mereka.
 
-## **Data Preparation**
-
-# **Data Preparation & Preprocessing**
+## **Data Preparation & Preprocessing**
 
 Tahap data preparation & preprocessing merupakan salah satu langkah krusial dalam pengembangan sistem rekomendasi berbasis collaborative filtering. Pada tahap ini, data mentah yang telah dikumpulkan dari dataset amazon.csv akan dibersihkan, diorganisasi, diseleksi dan dipersiapkan agar siap digunakan untuk analisis lebih lanjut serta pembuatan model rekomendasi. Tujuan utama dari tahap ini adalah memastikan bahwa data yang digunakan memiliki kualitas tinggi, konsisten, dan sesuai dengan kebutuhan algoritma collaborative filtering.
 
