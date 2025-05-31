@@ -745,3 +745,57 @@ Jika coverage rendah, maka pengguna cenderung melihat produk yang sama terus-men
 
 ---
 
+# 🔍 Kesimpulan Akhir Proyek Sistem Rekomendasi Berbasis Collaborative Filtering
+
+## 1. ✅ Apakah Sudah Menjawab Setiap Problem Statement?
+
+| Problem Statement | Pemenuhan Solusi | Penjelasan |
+|-------------------|------------------|------------|
+| **1. Sistem belum memberikan rekomendasi yang personal.** | ✅ Ya | Model Collaborative Filtering berhasil memahami preferensi individual pengguna berdasarkan interaksi historis. |
+| **2. Interaksi user-item bersifat sparse (jarang).** | ✅ Ya | Dengan pendekatan Neural Collaborative Filtering (NCF) dan embedding, model dapat menangani sparsity dengan efisien. |
+| **3. Tidak ada evaluasi metrik yang komprehensif.** | ✅ Ya | Evaluasi telah dilakukan secara terstruktur menggunakan metrik RMSE, MAE, dan Coverage@10. |
+
+---
+
+## 2. 🎯 Apakah Berhasil Mencapai Setiap Goals?
+
+| Goals | Status | Penjelasan |
+|-------|--------|------------|
+| **1. Membangun sistem rekomendasi berbasis Collaborative Filtering.** | ✅ Tercapai | Sistem dibangun menggunakan pendekatan NCF dan telah berjalan sesuai rencana. |
+| **2. Mengatasi sparsity dengan embedding & neural network.** | ✅ Tercapai | Embedding layer secara efektif mempelajari representasi user-item. |
+| **3. Evaluasi dengan metrik RMSE, MAE, dan Coverage.** | ✅ Tercapai | Evaluasi menunjukkan hasil yang baik: <br>• `RMSE = 0.1439` <br>• `MAE = 0.1096` <br>• `Coverage@10 = 0.5522` |
+
+---
+
+## 3. 🧠 Apakah Setiap Solution Statement Berdampak?
+
+| Solusi | Dampak & Bukti |
+|--------|----------------|
+| **1. Penggunaan NCF dan embedding.** | ✅ Model lebih akurat dalam memahami user-item, terbukti dari nilai RMSE dan MAE yang rendah. |
+| **2. Evaluasi menggunakan RMSE, MAE, Coverage.** | ✅ Sistem dinilai tidak hanya dari akurasi, tetapi juga keragaman rekomendasi (coverage > 55%). |
+
+---
+
+## 📌 Keselarasan dengan Business Understanding
+
+Proyek ini **selaras secara menyeluruh** dengan tujuan bisnis:
+
+- ✅ Problem statement yang diajukan telah dijawab secara sistematis.
+- ✅ Goals tercapai baik dari sisi teknis maupun fungsional.
+- ✅ Solusi yang ditetapkan memberikan dampak nyata terhadap kualitas hasil sistem rekomendasi.
+- ✅ Evaluasi dengan visualisasi dan angka menunjukkan performa model yang baik secara kuantitatif dan praktis.
+
+---
+
+## 🧾 Kesimpulan Akhir
+
+Model sistem rekomendasi berbasis **Neural Collaborative Filtering (NCF)** yang dibangun telah menunjukkan:
+
+- 🎯 **Tingkat akurasi prediksi yang tinggi**, ditunjukkan oleh nilai RMSE dan MAE yang sangat rendah.
+- 🔄 **Ragam rekomendasi yang luas**, dengan nilai Coverage@10 sebesar **0.5522**, berarti sistem berhasil merekomendasikan lebih dari 55% produk unik dari seluruh katalog.
+- 🤝 **Personalisasi rekomendasi yang efektif**, mendekatkan pengguna dengan produk yang sesuai dengan preferensinya.
+
+> Dengan pencapaian ini, sistem rekomendasi siap untuk diimplementasikan lebih lanjut, baik dalam skala terbatas (A/B testing) maupun integrasi penuh ke dalam sistem e-commerce yang ada.
+
+---
+
