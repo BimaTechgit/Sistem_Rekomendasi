@@ -503,3 +503,67 @@ print(df.columns)
 ```
 - Proses: Normalisasi rating ke skala 0–1 menggunakan formula min–max normalization kemudian Membagi dataset menjadi data pelatihan dan validasi (80:20) menggunakan train_test_split.
 - Alasan: Normalisasi membantu mempercepat konvergensi model dan mencegah dominasi nilai besar saat training sementara Split data dilakukan agar performa model dapat diuji pada data yang belum pernah dilihat, mencegah overfitting.
+
+## **Modeling**
+
+### **RecommenderNet (Custom Collaborative Filtering)**
+
+Model yang digunakan adalah Neural Collaborative Filtering, yaitu model pembelajaran mendalam yang memetakan user dan produk ke dalam embedding vector berdimensi tetap, kemudian mengalkulasi dot product antar keduanya untuk memperkirakan rating:
+
+- User Embedding Layer: Mengubah user_idx menjadi representasi dense.
+
+- Product Embedding Layer: Mengubah product_idx menjadi representasi dense.
+
+- Dot Product: Interaksi antara user dan produk dihitung sebagai hasil perkalian dot (inner product) dari dua vektor embedding.
+
+- Bias Layer: Penyesuaian bias individu untuk user dan produk.
+
+- Sigmoid Activation: Karena rating sudah dinormalisasi ke 0–1, maka output model menggunakan fungsi aktivasi sigmoid.
+
+#### **Parameter Penting**
+
+| Parameter                                            | Nilai           | Penjelasan                                                                                                                                                            |
+| ---------------------------------------------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `embedding_size`                                     | 50              | Dimensi latent space untuk merepresentasikan user dan produk. Nilai 50 dipilih setelah tuning dari nilai lebih kecil (20) untuk menangkap relasi yang lebih kompleks. |
+| `embeddings_initializer='he_normal'`                 | Default         | Inisialisasi bobot awal dari distribusi He, cocok untuk model non-linear.                                                                                             |
+| `embeddings_regularizer=keras.regularizers.l2(1e-6)` | 1e-6            | Regularisasi L2 untuk menghindari overfitting dengan membatasi besar bobot.                                                                                           |
+| `loss='MeanSquaredError'`                            | MSE             | Digunakan karena target (rating) adalah data kontinyu.                                                                                                                |
+| `optimizer='Adam'`                                   | Adam (lr=0.001) | Optimizer adaptif yang cocok untuk data sparse. Learning rate 0.001 stabil saat training.                                                                             |
+| `metrics=['RootMeanSquaredError']`                   | RMSE            | Dipilih karena lebih interpretable dibanding MSE dan sesuai dengan konteks rating.                                                                                    |
+| `activation=tf.nn.sigmoid`                           | Sigmoid         | Digunakan untuk memastikan output berada di rentang \[0, 1] karena target telah dinormalisasi.                                                                        |
+
+#### **📈 Proses Training**
+
+- Data telah melalui proses label encoding untuk mengubah user_id dan product_id ke dalam format integer.
+
+- Rating dinormalisasi ke skala 0–1 untuk konsistensi dengan fungsi aktivasi output.
+
+- Data dibagi menjadi training dan validation set (80:20).
+
+- import seluruh library untuk model Recommendernet
+
+- Model dirancang dengan dua buah embedding layer: satu untuk user dan satu untuk produk. Setiap pasangan user–produk dihitung dot product dari embedding-nya, ditambahkan bias user dan produk, kemudian dilalui fungsi aktivasi sigmoid.
+
+- Optimizer: Adam umumnya terbaik untuk kecepatan dan akurasi.
+
+- Model dilatih dengan fit(), dan performa divalidasi setiap epoch menggunakan RMSE.
+
+- membuat function untuk mendapatkan top recommendation sesuai dengan jumlah top_n yang diinisiasi
+
+- Menyajikan top-N recommendation sebagai output.
+
+#### **Kelebihan Model**
+
+- Scalable: Mampu menangani jumlah user dan produk yang sangat besar.
+
+- Fleksibel: Bisa dikembangkan menjadi hybrid model dengan menambahkan fitur konten.
+
+- Non-Linear: Berbasis neural network sehingga mampu menangkap pola kompleks dalam interaksi user–produk.
+
+#### **Kekurangan Model**
+
+- Cold Start Problem: Tidak dapat merekomendasikan untuk user/produk baru tanpa histori.
+
+- Butuh Banyak Data: Performa sangat tergantung pada jumlah interaksi (rating) yang tersedia.
+
+- Latihannya Lambat: Dibanding model klasik seperti matrix factorization, training membutuhkan waktu lebih lama.
