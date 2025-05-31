@@ -680,3 +680,23 @@ Ketarangan:
 
 Evaluasi dilakukan pada data validasi, menggunakan hasil prediksi model Collaborative Filtering. Nilai-nilai metrik dihitung sebagai berikut:
 
+```python
+Collaborative Filtering - RMSE: 0.1439
+Collaborative Filtering - MAE: 0.1096
+```
+
+![download (27)](https://github.com/user-attachments/assets/529e45bf-0a8a-4dd4-8bd1-606f7273dafd)
+
+Interpretasi:
+
+- Karena data rating telah dinormalisasi ke skala 0–1, maka nilai RMSE dan MAE dalam konteks ini juga berada dalam rentang tersebut.
+
+- RMSE = 0.1439 dan MAE = 0.1096 menunjukkan bahwa model memberikan prediksi yang cukup akurat terhadap preferensi user.
+
+- Nilai error ini relatif kecil, sehingga model dinilai mampu menangkap hubungan antara user dan item secara efektif.
+
+- RMSE = 0.1439 menunjukkan bahwa rata-rata akar kesalahan prediksi dari model relatif kecil, dan model berhasil menghindari error yang terlalu besar.
+
+- MAE = 0.1096 menunjukkan bahwa rata-rata deviasi absolut antara nilai prediksi dan aktual juga cukup kecil, yang menandakan bahwa model secara umum memberikan prediksi yang cukup dekat dengan nilai sebenarnya.
+
+
