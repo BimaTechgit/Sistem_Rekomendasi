@@ -600,3 +600,76 @@ Showing recommendations for user: AGE6O2NLNA3NUGORPU4SDK2S23QQ
 berdasarkan hasil tabel rekomendasi yang telah dibuat, diketahui bahwa produk dengan rating tinggi yang pernah diberi oleh user (misalnya rating 4.1 pada kabel OnePlus) digunakan sebagai referensi pola preferensi pengguna.
 
 melalui prediksi tersebut, Sistem berhasil merekomendasikan beragam kategori produk yang sebelumnya belum pernah diberi rating oleh user, dan semuanya memiliki prediksi rating > 0.57 dalam skala 0–1. Ini menunjukkan bahwa sistem memprioritaskan produk dengan estimasi ketertarikan pengguna yang tinggi.  Ini menunjukkan bahwa model yang dibangun telah belajar representasi user-product yang bermakna, dan dapat digunakan untuk membantu pengguna menemukan produk baru yang sesuai preferensi mereka.
+
+## 📈** Evaluasi Model**
+
+Laporan ini menyajikan hasil evaluasi dari model rekomendasi berbasis _Collaborative Filtering_, yang mengukur performa model dalam memprediksi rating pengguna terhadap produk. Dua metrik yang digunakan untuk evaluasi adalah **Root Mean Squared Error (RMSE)** dan **Mean Absolute Error (MAE)**.
+
+---
+
+## 🔢 1. Metrik Evaluasi
+
+### **A. Root Mean Squared Error (RMSE)**
+
+RMSE digunakan untuk mengukur rata-rata dari kuadrat selisih antara nilai prediksi dan nilai aktual. Metrik ini memberikan penalti lebih besar terhadap prediksi yang meleset jauh dari nilai sebenarnya, sehingga cocok untuk mengidentifikasi outlier dalam prediksi.
+
+**Formula:**
+
+$$
+RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}
+$$
+
+**Keterangan:**
+- $y_i$: nilai rating aktual pada sampel ke-\(i\)
+- $\hat{y}_i$: nilai rating hasil prediksi model pada sampel ke-\(i\)
+- $n$: jumlah total data (sampel)
+- $i$ adalah indeks sampel.
+
+**Interpretasi:**
+- Nilai RMSE yang **kecil** menunjukkan model memiliki performa yang baik dalam memprediksi nilai yang mendekati rating aktual.
+- Nilai RMSE yang **besar** mengindikasikan model melakukan kesalahan prediksi yang signifikan pada beberapa sampel.
+
+---
+
+### **B. Mean Absolute Error (MAE)**
+
+MAE menghitung rata-rata dari selisih absolut antara prediksi dan nilai aktual. Tidak seperti RMSE, MAE tidak memberi penalti lebih besar untuk kesalahan besar, sehingga lebih tahan terhadap outlier.
+
+**Formula:**
+
+$$
+MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|
+$$
+
+**Keterangan:**
+- $y_i$: nilai rating aktual pada sampel ke-\(i\)
+- $\hat{y}_i$: nilai rating hasil prediksi model pada sampel ke-\(i\)
+- $n$: jumlah total data (sampel)
+
+**Interpretasi:**
+- Semakin kecil nilai MAE, semakin akurat model dalam memberikan prediksi.
+- MAE memberikan rata-rata kesalahan model tanpa memperhitungkan arah kesalahan (positif atau negatif).
+
+---
+
+### **C. Coverage@K**
+
+**Coverage** adalah metrik yang digunakan untuk mengukur sejauh mana sistem rekomendasi mengeksplorasi keseluruhan item yang tersedia dalam dataset. Metrik ini menggambarkan **diversitas** dari hasil rekomendasi: apakah model hanya merekomendasikan item yang itu-itu saja, atau justru mampu memberikan hasil yang beragam.
+
+Coverage biasanya diukur dalam skenario **Top-N Recommendation**, dan dikenal dengan istilah **Coverage@K**.
+
+**Formula**
+
+$$
+Coverage@K = \frac{\text{Jumlah item unik yang direkomendasikan}}{\text{Jumlah total item tersedia}}
+$$
+
+Ketarangan:
+
+- **Numerator**: jumlah item unik yang muncul dalam semua daftar Top-K hasil rekomendasi
+- **Denominator**: total jumlah item unik yang tersedia di dataset
+
+## 📊 2. Hasil Evaluasi Model
+
+Evaluasi dilakukan pada data validasi, menggunakan hasil prediksi model Collaborative Filtering. Nilai-nilai metrik dihitung sebagai berikut:
+
