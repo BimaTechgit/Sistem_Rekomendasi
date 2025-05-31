@@ -601,11 +601,10 @@ berdasarkan hasil tabel rekomendasi yang telah dibuat, diketahui bahwa produk de
 
 melalui prediksi tersebut, Sistem berhasil merekomendasikan beragam kategori produk yang sebelumnya belum pernah diberi rating oleh user, dan semuanya memiliki prediksi rating > 0.57 dalam skala 0–1. Ini menunjukkan bahwa sistem memprioritaskan produk dengan estimasi ketertarikan pengguna yang tinggi.  Ini menunjukkan bahwa model yang dibangun telah belajar representasi user-product yang bermakna, dan dapat digunakan untuk membantu pengguna menemukan produk baru yang sesuai preferensi mereka.
 
-## 📈** Evaluasi Model**
+
+## 📈 **Evaluasi Model**
 
 Laporan ini menyajikan hasil evaluasi dari model rekomendasi berbasis _Collaborative Filtering_, yang mengukur performa model dalam memprediksi rating pengguna terhadap produk. Dua metrik yang digunakan untuk evaluasi adalah **Root Mean Squared Error (RMSE)** dan **Mean Absolute Error (MAE)**.
-
----
 
 ## 🔢 1. Metrik Evaluasi
 
