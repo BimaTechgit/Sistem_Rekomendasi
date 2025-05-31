@@ -568,6 +568,8 @@ Model yang digunakan adalah Neural Collaborative Filtering, yaitu model pembelaj
 
 - Latihannya Lambat: Dibanding model klasik seperti matrix factorization, training membutuhkan waktu lebih lama.
 
+### **Output Collaborative Filtering:**
+
 Showing recommendations for user: AGE6O2NLNA3NUGORPU4SDK2S23QQ
 
 ============================================================================================
