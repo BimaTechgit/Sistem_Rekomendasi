@@ -574,7 +574,7 @@ Showing recommendations for user: AGE6O2NLNA3NUGORPU4SDK2S23QQ
 
 ============================================================================================
 
-**Top Produk yang Dinilai Tinggi oleh Pengguna:**
+**Top products high_rated_by_user:**
 
 | | product_id | product_name | category | rating |
 |---|---|---|---|---|
@@ -582,7 +582,7 @@ Showing recommendations for user: AGE6O2NLNA3NUGORPU4SDK2S23QQ
 
 ============================================================================================
 
-**Top 10 Rekomendasi Produk:**
+**Top 10 product recommendations:**
 
 | | product_id | product_name | category | predicted_rating |
 |---|---|---|---|---|
