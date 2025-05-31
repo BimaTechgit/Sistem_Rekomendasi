@@ -567,3 +567,26 @@ Model yang digunakan adalah Neural Collaborative Filtering, yaitu model pembelaj
 - Butuh Banyak Data: Performa sangat tergantung pada jumlah interaksi (rating) yang tersedia.
 
 - Latihannya Lambat: Dibanding model klasik seperti matrix factorization, training membutuhkan waktu lebih lama.
+
+Rekomendasi untuk Pengguna: AGE02NLNA3NUGORPU4SDK2S23QQ
+
+**Top Produk yang Dinilai Tinggi oleh Pengguna:**
+
+| | product_id | product_name | category | rating |
+|---|---|---|---|---|
+| 568 | B0B5ZF3NRK | cedo 65w oneplus dash warp charge cable usb a... | computers accessories accessories peripherals ... | 4.1 |
+
+**Top 10 Rekomendasi Produk:**
+
+| | product_id | product_name | category | predicted_rating |
+|---|---|---|---|---|
+| 0 | B08SCCG9D4 | jbl commercial cslm20b auxiliary omnidirection... | computers accessories accessories peripherals ... | 0.574407 |
+| 1 | B09SPTING8 | crompton saga sapphira 1200 mm ultra high speed... | home kitchen heating cooling airquality fans c... | 0.573836 |
+| 2 | B0B56YRBNC | tecno spark 9 sky mirror 6gb ram 128gb storage... | electronics mobiles accessories smartphones ba... | 0.573110 |
+| 3 | B08YRMBK9R | candes 10 litre perfecto 5 star rated automati... | home kitchen heating cooling airquality waterh... | 0.572954 |
+| 4 | B07SRM87TP | agaro regal 800 watts handheld vacuum cleaner ... | home kitchen kitchen homeappliances vacuum cle... | 0.572752 |
+| 5 | B079Y6JZC8 | zebronics zeb comfort wired usb mouse 3 button... | computers accessories accessories peripherals ... | 0.572065 |
+| 6 | B09XJ5LD6L | samsung galaxy m53 5g deep ocean blue 6gb 128g... | electronics mobiles accessories smartphones ba... | 0.571634 |
+| 7 | B082DJDCPX | swapkart fast charging cable and data sync usb... | computers accessories accessories peripherals ... | 0.571472 |
+| 8 | B09F6KL23R | skytone stainless steel electric meat grinders... | home kitchen kitchen homeappliances smallkitch... | 0.571225 |
+| 9 | B09GBBJVL2 | hp 330 wireless black keyboard and mouse set w... | computers accessories accessories peripherals ... | 0.570087 |
