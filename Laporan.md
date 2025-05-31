@@ -485,6 +485,10 @@ X_train, x_val_cf, y_train, y_val_cf = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
+# Get the number of unique users and products from the encoders
+num_users = len(user_encoder.classes_)
+num_products = len(product_encoder.classes_)
+
 # Cek kembali
 print("Sample of X (user_idx, product_idx):")
 print(X[:5])
@@ -494,6 +498,8 @@ print(f"\nShape of X_train: {X_train.shape}")
 print(f"Shape of x_val_cf: {x_val_cf.shape}")
 print(f"Shape of y_train: {y_train.shape}")
 print(f"Shape of y_val_cf: {y_val_cf.shape}")
+print(f"\nNumber of unique users: {num_users}")
+print(f"Number of unique products: {num_products}")
 
 # Pastikan kolom asli tidak dihapus
 print("\nKolom-kolom dalam dataframe setelah preprocessing:")
