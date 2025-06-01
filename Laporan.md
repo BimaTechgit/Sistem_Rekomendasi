@@ -196,7 +196,7 @@ https://www.kaggle.com/datasets/karkavelrajaj/amazon-sales-dataset
 
 ## Exploratory Data Analysis (EDA)
 
-![download (25)](https://github.com/user-attachments/assets/ce6c43cb-7879-4d06-96dc-7fe33e5fb693)
+![EDA_Top10](https://github.com/user-attachments/assets/5c2af061-e1b8-486c-8a7c-f300de58661a)
 
 Berdasarkan visualisasi grafik yang menampilkan 10 kategori produk terpopuler , kita dapat melihat bahwa kategori produk sangat beragam namun tetap mencerminkan tren konsumsi modern yang didominasi oleh teknologi dan kebutuhan sehari-hari. Kategori dengan jumlah produk tertinggi adalah "Computers&Accessories|Accessories&Peripherals|Cables&Accessories|Cables|USBCables" , yang menunjukkan bahwa aksesori elektronik seperti kabel USB memiliki permintaan yang sangat tinggi. Hal ini tidak mengherankan, mengingat perangkat elektronik saat ini hampir selalu membutuhkan koneksi data yang cepat dan andal, serta kabel USB menjadi salah satu komponen penting dalam ekosistem teknologi modern. Dominasi kategori ini juga mencerminkan bagaimana pengguna cenderung membeli produk-produk pendukung untuk perangkat utama mereka, seperti laptop, smartphone, atau tablet.
 
