@@ -580,7 +580,7 @@ Final Validation Loss (MSE): 0.0241
 Final Validation (RMSE): 0.1441
 ```
 
-![download (26)](https://github.com/user-attachments/assets/7742a3ce-4934-45a7-992d-9f324e596c26)
+![Metrix](https://github.com/user-attachments/assets/bc661036-b718-42b8-85a4-8dd4aed8f063)
 
 Showing recommendations for user: AGE6O2NLNA3NUGORPU4SDK2S23QQ
 
@@ -690,7 +690,7 @@ Collaborative Filtering - RMSE: 0.1441
 Collaborative Filtering - MAE: 0.1098
 ```
 
-![download (28)](https://github.com/user-attachments/assets/0e95a3db-f9c4-4ae9-8fe6-356e0cd71c1e)
+![RSME_MAE](https://github.com/user-attachments/assets/717ca66d-3fb0-49dd-ab8f-27baf91d61af)
 
 Interpretasi:
 
@@ -733,7 +733,7 @@ home kitchen kitchen homeappliances smallkitchenappliances handblenders         
 
 Visualisasi berikut menunjukkan kategori produk yang paling sering muncul dalam hasil rekomendasi:
 
-![download (24)](https://github.com/user-attachments/assets/ac1263ae-9039-49e7-82a5-a173d0738074)
+![Coverage](https://github.com/user-attachments/assets/5cfe89e2-a96e-490d-9f26-fe3a1121a7c4)
 
 **Observasi:**
 - Kategori terbanyak berasal dari sub-kategori **computer & accessories** seperti kabel USB dan mouse.
